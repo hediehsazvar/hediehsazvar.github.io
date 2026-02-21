@@ -221,3 +221,38 @@ p{ margin: 0 0 16px; }
   }
   .brand{ justify-content:center; }
 }
+
+/* --- NAV FIX: style all links in the top nav (even without classes) --- */
+.topbar{ position: relative; z-index: 10; }
+
+.topnav{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  flex-wrap: wrap;
+  padding: 10px 12px;
+  min-height: 54px;
+}
+
+.topnav a{
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none !important;
+  padding: 8px 12px;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.topnav a:hover{
+  border-bottom-color: rgba(255,255,255,0.75);
+}
+
+/* highlight current page if you add class="active" on that link */
+.topnav a.active{
+  border-bottom-color: #fff;
+}
