@@ -1,7 +1,8 @@
 :root{
-  /* Northwestern-like palette */
+  /* Northwestern-ish palette */
   --nu-purple:#4E2A84;
   --nu-purple-dark:#3b1f66;
+
   --text:#111827;
   --muted:#4b5563;
   --border:#e5e7eb;
@@ -9,8 +10,19 @@
   --sidebar:#ffffff;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
+/* Critical: prevent horizontal scroll from any overflow */
+html, body{
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden;
+}
+
+*{
+  box-sizing:border-box;
+  max-width:100%;
+}
+
 body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   background: var(--bg);
@@ -18,19 +30,11 @@ body{
   line-height: 1.7;
 }
 
-html, body{
-  width: 100%;
-  overflow-x: hidden;
-}
-*{
-  max-width: 100%;
-}
-
-/* Layout: fixed-ish sidebar + main */
+/* ---------- Layout ---------- */
 .page{
-  display: grid;
-  grid-template-columns: 280px minmax(0, 1fr); /* IMPORTANT: minmax(0,1fr) */
-  min-height: 100vh;
+  display:grid;
+  grid-template-columns: 280px minmax(0, 1fr); /* IMPORTANT */
+  min-height:100vh;
 }
 
 .sidebar{
@@ -39,13 +43,25 @@ html, body{
   padding: 22px 18px;
 }
 
+.main{
+  min-width:0; /* IMPORTANT: prevents overflow */
+}
+
+/* ---------- Brand (logo) ---------- */
 .brand{
   display:flex;
   align-items:center;
+  justify-content:flex-start;
   gap:10px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
-.brand-logo{height:34px;width:auto;display:block}
+
+.brand-logo{
+  height: 56px;   /* increase/decrease here */
+  width: auto;
+  display:block;
+}
+
 .brand-text{
   font-weight:800;
   letter-spacing:0.18em;
@@ -53,17 +69,19 @@ html, body{
   font-size: 14px;
 }
 
-/* Sidebar profile */
+/* ---------- Sidebar profile ---------- */
 .avatar{
   width: 100%;
-  max-width: 230px;      /* controls how wide it appears in the sidebar */
-  height: auto;          /* keeps the full image (no cropping) */
-  border-radius: 12px;   /* rounded corners; set to 0 if you want sharp corners */
-  object-fit: contain;   /* ensures the entire photo is visible */
-  display: block;
-  margin: 16px auto 12px;
+  max-width: 240px;      /* controls visual width */
+  height: auto;          /* shows full picture */
+  max-height: 360px;     /* prevents super tall photos from dominating */
+  border-radius: 14px;   /* rounded rectangle */
+  object-fit: contain;   /* do NOT crop */
+  display:block;
+  margin: 14px auto 12px;
   border: 1px solid var(--border);
   box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  background:#fff;
 }
 
 .side-name{
@@ -78,10 +96,14 @@ html, body{
   color: var(--muted);
   font-size: 13.5px;
 }
-.side-affil{margin-top:4px}
 
+.side-affil{
+  margin-top: 4px;
+}
+
+/* ---------- Sidebar contact ---------- */
 .side-section-title{
-  margin-top: 22px;
+  margin-top: 20px;
   padding-top: 16px;
   border-top: 1px solid var(--border);
   text-align:center;
@@ -109,58 +131,86 @@ html, body{
   justify-content:center;
   background: #fff;
   text-decoration:none;
+  flex: 0 0 auto;
 }
-.iconbtn:hover{background:#f7f7fb}
-.iconbtn svg{width:20px;height:20px;fill: var(--nu-purple)}
 
-/* Top bar like your example */
-.main{
-  min-width: 0;  /* IMPORTANT: allows content to shrink without overflow */
+.iconbtn:hover{
+  background:#f7f7fb;
 }
+
+.iconbtn svg{
+  width:20px;
+  height:20px;
+  fill: var(--nu-purple);
+}
+
+/* ---------- Top bar ---------- */
+.topbar{
+  background: var(--nu-purple);
+  padding: 0 12px;
+}
+
+/* Make nav responsive and never overflow */
 .topnav{
   max-width: 1100px;
   margin: 0 auto;
   display:flex;
-  justify-content: center;
-  gap: 46px;
-  height: 54px;
+  justify-content:center;
   align-items:center;
-}
-.topnav{
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
   gap: 26px;
-  height: 54px;
-  align-items: center;
-  flex-wrap: wrap;          /* allows wrapping */
-  padding: 0 10px;
+  min-height: 54px;      /* use min-height so wrap doesn't overflow */
+  flex-wrap: wrap;       /* prevents horizontal scroll */
+  padding: 8px 10px;     /* gives space when wrapped */
 }
 
 .topnav a{
-  white-space: nowrap;      /* keeps each item intact */
+  color:#fff;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration:none;
+  padding: 8px 10px;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;   /* keep each item intact */
 }
-.topnav a:hover{border-bottom-color: rgba(255,255,255,0.75)}
-.topnav a.active{border-bottom-color:#fff}
 
-/* Main content */
+.topnav a:hover{
+  border-bottom-color: rgba(255,255,255,0.75);
+}
+
+.topnav a.active{
+  border-bottom-color:#fff;
+}
+
+/* ---------- Main content ---------- */
 .content{
   max-width: 1100px;
   margin: 0 auto;
   padding: 24px 18px 60px;
+  width: 100%;
+  min-width: 0;
 }
+
 h1{
   margin: 18px 0 18px;
   font-size: 48px;
   color: var(--nu-purple);
+  line-height: 1.1;
 }
 
-p{margin: 0 0 16px}
+p{
+  margin: 0 0 16px;
+}
 
-/* Mobile */
+/* ---------- Mobile ---------- */
 @media (max-width: 900px){
-  .page{grid-template-columns: 1fr}
-  .sidebar{border-right:none;border-bottom: 1px solid var(--border)}
-  .topnav{justify-content:flex-start; gap: 18px}
+  .page{
+    grid-template-columns: 1fr;
+  }
+  .sidebar{
+    border-right:none;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand{
+    justify-content:center;
+  }
 }
