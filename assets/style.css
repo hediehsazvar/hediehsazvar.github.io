@@ -18,11 +18,19 @@ body{
   line-height: 1.7;
 }
 
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
+*{
+  max-width: 100%;
+}
+
 /* Layout: fixed-ish sidebar + main */
 .page{
-  display:grid;
-  grid-template-columns: 280px 1fr;
-  min-height:100vh;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr); /* IMPORTANT: minmax(0,1fr) */
+  min-height: 100vh;
 }
 
 .sidebar{
@@ -106,10 +114,8 @@ body{
 .iconbtn svg{width:20px;height:20px;fill: var(--nu-purple)}
 
 /* Top bar like your example */
-.main{min-width:0}
-.topbar{
-  background: var(--nu-purple);
-  padding: 0 22px;
+.main{
+  min-width: 0;  /* IMPORTANT: allows content to shrink without overflow */
 }
 .topnav{
   max-width: 1100px;
@@ -120,13 +126,20 @@ body{
   height: 54px;
   align-items:center;
 }
+.topnav{
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  height: 54px;
+  align-items: center;
+  flex-wrap: wrap;          /* allows wrapping */
+  padding: 0 10px;
+}
+
 .topnav a{
-  color:#fff;
-  font-weight: 700;
-  font-size: 15px;
-  text-decoration:none;
-  padding: 10px 14px;
-  border-bottom: 3px solid transparent;
+  white-space: nowrap;      /* keeps each item intact */
 }
 .topnav a:hover{border-bottom-color: rgba(255,255,255,0.75)}
 .topnav a.active{border-bottom-color:#fff}
@@ -135,9 +148,8 @@ body{
 .content{
   max-width: 1100px;
   margin: 0 auto;
-  padding: 28px 24px 60px;
+  padding: 24px 18px 60px;
 }
-
 h1{
   margin: 18px 0 18px;
   font-size: 48px;
