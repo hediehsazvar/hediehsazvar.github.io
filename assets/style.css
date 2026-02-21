@@ -47,14 +47,15 @@ body{
 
 /* Sidebar profile */
 .avatar{
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  display:block;
+  width: 100%;
+  max-width: 230px;      /* controls how wide it appears in the sidebar */
+  height: auto;          /* keeps the full image (no cropping) */
+  border-radius: 12px;   /* rounded corners; set to 0 if you want sharp corners */
+  object-fit: contain;   /* ensures the entire photo is visible */
+  display: block;
   margin: 16px auto 12px;
-  border: 5px solid #fff;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
 }
 
 .side-name{
