@@ -3,56 +3,64 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Hedieh Sazvar | Home</title>
+  <title>Hedieh Sazvar</title>
   <link rel="stylesheet" href="assets/style.css"/>
 </head>
+
 <body>
   <div class="page">
 
+    <!-- LEFT SIDEBAR -->
     <aside class="sidebar">
       <div class="brand">
-        <!-- Upload an official logo you have rights to and name it assets/northwestern-logo.png -->
-        <img src="assets/northwestern-logo.png" alt="Northwestern University" onerror="this.style.display='none'; document.getElementById('brandText').style.display='block';">
+        <!-- Upload your logo to: assets/northwestern-logo.png -->
+        <img class="brand-logo" src="assets/northwestern-logo.png" alt="Northwestern University"
+             onerror="this.style.display='none'; document.getElementById('brandText').style.display='block';">
         <div id="brandText" class="brand-text" style="display:none;">NORTHWESTERN</div>
       </div>
 
-      <div class="profile">
-        <!-- Upload your photo as assets/headshot.jpg -->
-        <img class="avatar" src="assets/headshot.jpg" alt="Hedieh Sazvar" onerror="this.style.display='none';"/>
+      <!-- Upload your photo to: assets/headshot.jpg -->
+      <img class="avatar" src="assets/headshot.jpg" alt="Hedieh Sazvar"
+           onerror="this.style.display='none';">
 
-        <h3 class="name">Hedieh Sazvar</h3>
-        <p class="role">PhD Candidate</p>
-        <p class="affil">Operations Research (IEMS)<br/>Northwestern University</p>
+      <h2 class="side-name">Hedieh Sazvar</h2>
+      <div class="side-role">PhD Candidate</div>
+      <div class="side-affil">
+        Operations Research (IEMS)<br/>
+        Northwestern University
       </div>
 
-      <div class="contact">
-        <h3>Contact</h3>
-        <div class="iconrow">
-          <!-- Email -->
-          <a class="iconbtn" href="mailto:hedieh.sazvar@northwestern.edu" aria-label="Email">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
-          </a>
-          <!-- LinkedIn (replace URL) -->
-          <a class="iconbtn" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM0.5 8.5H4.5V23H0.5V8.5ZM8.5 8.5H12.3V10.5H12.36C12.89 9.5 14.2 8.45 16.1 8.45C20.1 8.45 20.85 11.05 20.85 14.45V23H16.85V15.25C16.85 13.4 16.82 11.05 14.35 11.05C11.85 11.05 11.5 13 11.5 15.12V23H7.5V8.5H8.5Z"/></svg>
-          </a>
-          <!-- GitHub -->
-          <a class="iconbtn" href="https://github.com/hediehsazvar" target="_blank" rel="noopener" aria-label="GitHub">
-            <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .1 2.5 1.4 1.1 2 3 1.4 3.7 1.1.1-.8.4-1.4.8-1.7-2.7-.3-5.4-1.4-5.4-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 5 18 5.3 18 5.3a4.3 4.3 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.7 5.7-5.4 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
-          </a>
-        </div>
+      <div class="side-section-title">Contact</div>
+      <div class="side-icons">
+        <a class="iconbtn" href="mailto:hedieh.sazvar@northwestern.edu" aria-label="Email">
+          <!-- mail -->
+          <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+        </a>
+
+        <!-- replace with your real LinkedIn -->
+        <a class="iconbtn" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM0.5 8.5H4.5V23H0.5V8.5ZM8.5 8.5H12.3V10.5H12.36C12.89 9.5 14.2 8.45 16.1 8.45C20.1 8.45 20.85 11.05 20.85 14.45V23H16.85V15.25C16.85 13.4 16.82 11.05 14.35 11.05C11.85 11.05 11.5 13 11.5 15.12V23H7.5V8.5H8.5Z"/></svg>
+        </a>
+
+        <a class="iconbtn" href="https://github.com/hediehsazvar" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .1 2.5 1.4 1.1 2 3 1.4 3.7 1.1.1-.8.4-1.4.8-1.7-2.7-.3-5.4-1.4-5.4-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 5 18 5.3 18 5.3a4.3 4.3 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.7 5.7-5.4 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+        </a>
       </div>
     </aside>
 
+    <!-- MAIN -->
     <main class="main">
+
+      <!-- TOP NAV BAR -->
       <div class="topbar">
-        <div class="nav">
+        <div class="topnav">
           <a class="active" href="index.html">Home</a>
           <a href="research.html">Research</a>
           <a href="cv.html">CV</a>
         </div>
       </div>
 
+      <!-- CONTENT -->
       <div class="content">
         <h1>About me</h1>
 
@@ -71,26 +79,8 @@
         <p>
           I also work on reinforcement-learning–inspired decision policies (rollout-augmented lookahead) for fork-join queueing systems.
         </p>
-
-        <div class="card">
-          <span class="badge">Interests</span>
-          <span class="badge">Optimization</span>
-          <span class="badge">Marketplace algorithms</span>
-          <span class="badge">Stochastic modeling</span>
-          <span class="badge">MIP / decomposition</span>
-          <span class="badge">Revenue management</span>
-          <div class="meta" style="margin-top:10px;">
-            Tools: Python, Gurobi, AMPL, SQL/BigQuery, R
-          </div>
-        </div>
-
-        <hr/>
-
-        <div class="card">
-          <div class="meta"><strong>Update:</strong> Open to industry research/applied scientist roles in optimization/marketplace/revenue management.</div>
-        </div>
-
       </div>
+
     </main>
 
   </div>
