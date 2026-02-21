@@ -1,5 +1,4 @@
 :root{
-  /* Northwestern-ish palette */
   --nu-purple:#4E2A84;
   --nu-purple-dark:#3b1f66;
 
@@ -10,7 +9,7 @@
   --sidebar:#ffffff;
 }
 
-/* Critical: prevent horizontal scroll from any overflow */
+/* Kill horizontal scroll globally */
 html, body{
   margin:0;
   padding:0;
@@ -33,7 +32,7 @@ body{
 /* ---------- Layout ---------- */
 .page{
   display:grid;
-  grid-template-columns: 280px minmax(0, 1fr); /* IMPORTANT */
+  grid-template-columns: 280px minmax(0, 1fr);
   min-height:100vh;
 }
 
@@ -44,7 +43,7 @@ body{
 }
 
 .main{
-  min-width:0; /* IMPORTANT: prevents overflow */
+  min-width:0; /* prevents overflow */
 }
 
 /* ---------- Brand (logo) ---------- */
@@ -57,7 +56,7 @@ body{
 }
 
 .brand-logo{
-  height: 56px;   /* increase/decrease here */
+  height: 64px;   /* make logo bigger here */
   width: auto;
   display:block;
 }
@@ -72,11 +71,11 @@ body{
 /* ---------- Sidebar profile ---------- */
 .avatar{
   width: 100%;
-  max-width: 240px;      /* controls visual width */
-  height: auto;          /* shows full picture */
-  max-height: 360px;     /* prevents super tall photos from dominating */
-  border-radius: 14px;   /* rounded rectangle */
-  object-fit: contain;   /* do NOT crop */
+  max-width: 240px;
+  height: auto;
+  max-height: 360px;
+  border-radius: 14px;
+  object-fit: contain; /* show full picture */
   display:block;
   margin: 14px auto 12px;
   border: 1px solid var(--border);
@@ -148,9 +147,10 @@ body{
 .topbar{
   background: var(--nu-purple);
   padding: 0 12px;
+  position: relative;
+  z-index: 10;
 }
 
-/* Make nav responsive and never overflow */
 .topnav{
   max-width: 1100px;
   margin: 0 auto;
@@ -158,30 +158,32 @@ body{
   justify-content:center;
   align-items:center;
   gap: 26px;
-  min-height: 54px;      /* use min-height so wrap doesn't overflow */
-  flex-wrap: wrap;       /* prevents horizontal scroll */
-  padding: 8px 10px;     /* gives space when wrapped */
+  flex-wrap: wrap;
+  padding: 10px 12px;
+  min-height: 54px;
 }
 
-.topnav a{
-  color:#fff;
-  font-weight: 700;
+/* Force nav links to be visible */
+.topnav .navlink{
+  color:#fff !important;
+  font-weight:700;
   font-size: 15px;
-  text-decoration:none;
-  padding: 8px 10px;
+  text-decoration:none !important;
+  padding: 8px 12px;
   border-bottom: 3px solid transparent;
-  white-space: nowrap;   /* keep each item intact */
+  white-space: nowrap;
+  line-height: 1;
 }
 
-.topnav a:hover{
+.topnav .navlink:hover{
   border-bottom-color: rgba(255,255,255,0.75);
 }
 
-.topnav a.active{
-  border-bottom-color:#fff;
+.topnav .navlink.active{
+  border-bottom-color: #fff;
 }
 
-/* ---------- Main content ---------- */
+/* ---------- Content ---------- */
 .content{
   max-width: 1100px;
   margin: 0 auto;
@@ -197,20 +199,25 @@ h1{
   line-height: 1.1;
 }
 
-p{
-  margin: 0 0 16px;
+h2{
+  margin: 24px 0 10px;
+  font-size: 20px;
+  color: var(--nu-purple-dark);
+}
+
+p{ margin: 0 0 16px; }
+
+.meta{
+  color: var(--muted);
+  font-size: 13.5px;
 }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 900px){
-  .page{
-    grid-template-columns: 1fr;
-  }
+  .page{ grid-template-columns: 1fr; }
   .sidebar{
     border-right:none;
     border-bottom: 1px solid var(--border);
   }
-  .brand{
-    justify-content:center;
-  }
+  .brand{ justify-content:center; }
 }
