@@ -35,7 +35,7 @@
           <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM0.5 8.5H4.5V23H0.5V8.5ZM8.5 8.5H12.3V10.5H12.36C12.89 9.5 14.2 8.45 16.1 8.45C20.1 8.45 20.85 11.05 20.85 14.45V23H16.85V15.25C16.85 13.4 16.82 11.05 14.35 11.05C11.85 11.05 11.5 13 11.5 15.12V23H7.5V8.5H8.5Z"/></svg>
         </a>
         <a class="iconbtn" href="https://github.com/hediehsazvar" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .1 2.5 1.4 1.1 2 3 1.4 3.7 1.1.1-.8.4-1.4.8-1.7-2.7-.3-5.4-1.4-5.4-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 5 18 5.3 18 5.3a4.3 4.3 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.7 5.7-5.4 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .1 2.5 1.4 1.1 2 3 1.4 3.7 1.1.1-.8.4-1.4.8-1.7-2.7-.3-5.4-1.4-5.4-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 5 18 5.3 18 5.3a4.3 4.7 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.7 5.7-5.4 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
         </a>
       </div>
     </aside>
@@ -43,44 +43,49 @@
     <main class="main">
       <div class="topbar">
         <div class="topnav">
-          <a href="index.html">Home</a>
-          <a class="active" href="research.html">Research</a>
-          <a href="cv.html">CV</a>
+          <a href="/" class="navlink">Home</a>
+          <a href="/research.html" class="navlink active">Research</a>
+          <a href="/cv.html" class="navlink">CV</a>
         </div>
       </div>
 
       <div class="content">
         <h1>Research</h1>
 
+        <h2>Sequential job recommendation under no-shows</h2>
         <p>
-          My research focuses on optimization and stochastic modeling for online matching platforms under uncertainty,
-          motivated by nurse-to-shift staffing markets and no-show behavior.
+          I study online matching platforms where agents arrive sequentially and the platform recommends limited-capacity jobs.
+          Agents may accept and later no-show; cancellations can create unsellable capacity. My work develops optimal policy structure
+          and scalable optimization methods to maximize filled jobs and expected revenue.
+        </p>
+        <p class="meta">
+          Keywords: sequential decision-making · stochastic optimization · overbooking · MIP formulations · heuristics
         </p>
 
         <h2>Working papers</h2>
+
         <p><strong>Optimal Sequential Job Recommendations with No-Shows</strong><br/>
-          <span class="meta">Working paper. (Add links: PDF / code)</span>
+          <span class="meta">Working paper (2026). Links: <a href="#">PDF</a> · <a href="#">Code</a></span>
         </p>
 
         <p><strong>Overbooking in Sequential Job Recommendation Platforms with No-Shows</strong><br/>
-          <span class="meta">Working paper. (Add links: PDF / code)</span>
+          <span class="meta">Working paper (2026). Links: <a href="#">PDF</a></span>
         </p>
 
         <p><strong>Dependent Preferences in Online Matching and Recommendation</strong><br/>
-          <span class="meta">Working paper. (Add links: PDF / code)</span>
+          <span class="meta">Working paper (2026). Links: <a href="#">PDF</a></span>
         </p>
 
         <p><strong>Rollout-Augmented Lookahead Policies for Dynamic Join Decisions in Fork-Join Queues</strong><br/>
-          <span class="meta">Working paper. (Add links: PDF / code)</span>
+          <span class="meta">Working paper (2025/2026). Links: <a href="#">PDF</a> · <a href="#">Code</a></span>
         </p>
 
-        <h2>Methods</h2>
+        <h2>Selected methods</h2>
         <ul>
-          <li>MIP formulations (linear/quadratic/polynomial) and solver tuning</li>
-          <li>Reformulations and decomposition / cut generation</li>
-          <li>Simulation-based evaluation; rollout/lookahead baselines</li>
+          <li>Mixed-integer programming (linear/quadratic/polynomial), reformulations, and solver engineering</li>
+          <li>Decomposition and cut generation for scalable solution methods</li>
+          <li>Simulation-based evaluation and rollout/lookahead baselines</li>
         </ul>
-
       </div>
     </main>
 
