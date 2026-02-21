@@ -1,348 +1,98 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hedieh Sazvar</title>
-  <meta name="description" content="Hedieh Sazvar — PhD Candidate in Operations Research, Northwestern University. Optimization, stochastic modeling, marketplace algorithms." />
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#111827;
-      --muted:#4b5563;
-      --border:#e5e7eb;
-      --card:#f9fafb;
-      --link:#0f766e;
-      --link-hover:#115e59;
-      --maxw: 980px;
-      --radius: 14px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.6;
-    }
-    a{color:var(--link); text-decoration:none}
-    a:hover{color:var(--link-hover); text-decoration:underline}
-    .wrap{max-width:var(--maxw); margin:0 auto; padding: 28px 18px 60px}
-    header{
-      display:flex; gap:18px; align-items:flex-start; justify-content:space-between;
-      padding: 22px 0 18px;
-      border-bottom: 1px solid var(--border);
-    }
-    .title h1{margin:0; font-size: 30px; letter-spacing: 0.2px}
-    .title .sub{margin-top:6px; color:var(--muted); font-size: 14.5px}
-    nav{
-      display:flex; flex-wrap:wrap; gap:10px 14px;
-      justify-content:flex-end;
-      padding-top: 6px;
-      max-width: 420px;
-    }
-    nav a{
-      font-size: 13.5px;
-      padding: 6px 10px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: #fff;
-    }
-    nav a:hover{background: var(--card); text-decoration:none}
-    .grid{
-      display:grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 18px;
-      margin-top: 22px;
-    }
-    @media (max-width: 860px){
-      header{flex-direction:column; align-items:flex-start}
-      nav{justify-content:flex-start; max-width:none}
-      .grid{grid-template-columns: 1fr}
-    }
-    .card{
-      border: 1px solid var(--border);
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 18px 18px;
-    }
-    .card h2{margin:0 0 8px; font-size: 16px}
-    .card p{margin: 10px 0}
-    .pillrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
-    .pill{
-      font-size: 12.5px;
-      padding: 6px 10px;
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      background: #fff;
-      color: var(--muted);
-    }
-    section{margin-top: 26px}
-    section h2{
-      margin: 0 0 10px;
-      font-size: 18px;
-      letter-spacing: 0.2px;
-    }
-    .hr{height:1px; background:var(--border); margin: 22px 0}
-    ul{margin: 10px 0 0; padding-left: 18px}
-    li{margin: 6px 0}
-    .two{
-      display:grid; grid-template-columns: 1fr 1fr; gap: 16px;
-    }
-    @media (max-width: 860px){ .two{grid-template-columns:1fr} }
-    .muted{color:var(--muted)}
-    .small{font-size: 13.5px}
-    .kicker{font-size: 12px; text-transform:uppercase; letter-spacing: 0.12em; color:var(--muted)}
-    .pub{
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 14px 14px;
-      background: #fff;
-      margin-top: 10px;
-    }
-    .pub .t{font-weight: 600}
-    .pub .m{color: var(--muted); font-size: 13.5px; margin-top: 4px}
-    .pub .l{margin-top: 6px; font-size: 13.5px}
-    footer{
-      margin-top: 44px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
-    .btn{
-      display:inline-block;
-      padding: 8px 12px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      background: #fff;
-      font-size: 13.5px;
-    }
-    .btn:hover{background: var(--card); text-decoration:none}
-    .note{font-size: 12.5px; color: var(--muted); margin-top: 10px}
-    code{background:#f3f4f6; padding:2px 6px; border-radius: 8px}
-  </style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Hedieh Sazvar | Home</title>
+  <link rel="stylesheet" href="assets/style.css"/>
 </head>
-
 <body>
-  <div class="wrap">
+  <div class="page">
 
-    <header>
-      <div class="title">
-        <h1>Hedieh Sazvar</h1>
-        <div class="sub">
-          PhD Candidate, Operations Research (IEMS) · Northwestern University<br />
-          Optimization · Stochastic modeling · Marketplace algorithms
+    <aside class="sidebar">
+      <div class="brand">
+        <!-- Upload an official logo you have rights to and name it assets/northwestern-logo.png -->
+        <img src="assets/northwestern-logo.png" alt="Northwestern University" onerror="this.style.display='none'; document.getElementById('brandText').style.display='block';">
+        <div id="brandText" class="brand-text" style="display:none;">NORTHWESTERN</div>
+      </div>
+
+      <div class="profile">
+        <!-- Upload your photo as assets/headshot.jpg -->
+        <img class="avatar" src="assets/headshot.jpg" alt="Hedieh Sazvar" onerror="this.style.display='none';"/>
+
+        <h3 class="name">Hedieh Sazvar</h3>
+        <p class="role">PhD Candidate</p>
+        <p class="affil">Operations Research (IEMS)<br/>Northwestern University</p>
+      </div>
+
+      <div class="contact">
+        <h3>Contact</h3>
+        <div class="iconrow">
+          <!-- Email -->
+          <a class="iconbtn" href="mailto:hedieh.sazvar@northwestern.edu" aria-label="Email">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+          </a>
+          <!-- LinkedIn (replace URL) -->
+          <a class="iconbtn" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM0.5 8.5H4.5V23H0.5V8.5ZM8.5 8.5H12.3V10.5H12.36C12.89 9.5 14.2 8.45 16.1 8.45C20.1 8.45 20.85 11.05 20.85 14.45V23H16.85V15.25C16.85 13.4 16.82 11.05 14.35 11.05C11.85 11.05 11.5 13 11.5 15.12V23H7.5V8.5H8.5Z"/></svg>
+          </a>
+          <!-- GitHub -->
+          <a class="iconbtn" href="https://github.com/hediehsazvar" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.6-1.4-1.4-1.8-1.4-1.8-1.2-.8.1-.8.1-.8 1.3.1 2 .1 2.5 1.4 1.1 2 3 1.4 3.7 1.1.1-.8.4-1.4.8-1.7-2.7-.3-5.4-1.4-5.4-6a4.7 4.7 0 0 1 1.2-3.2 4.3 4.3 0 0 1 .1-3.2s1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 5 18 5.3 18 5.3a4.3 4.3 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.2 3.2c0 4.6-2.7 5.7-5.4 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+          </a>
         </div>
+      </div>
+    </aside>
 
-        <div class="btnrow">
-          <!-- Replace links below with your real URLs -->
-          <a class="btn" href="#contact">Contact</a>
-          <a class="btn" href="#cv">CV</a>
-          <a class="btn" href="#publications">Publications</a>
-          <a class="btn" href="https://github.com/hediehsazvar" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    <main class="main">
+      <div class="topbar">
+        <div class="nav">
+          <a class="active" href="index.html">Home</a>
+          <a href="research.html">Research</a>
+          <a href="cv.html">CV</a>
         </div>
       </div>
 
-      <nav aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#industry">Industry</a>
-        <a href="#cv">CV</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+      <div class="content">
+        <h1>About me</h1>
 
-    <!-- Top summary -->
-    <div class="grid" id="about">
-      <div class="card">
-        <div class="kicker">About</div>
         <p>
-          I am a PhD candidate in Operations Research at Northwestern University (IEMS). My research studies
-          sequential matching and recommendation in online platforms under uncertainty (e.g., no-shows and overbooking),
-          with an emphasis on scalable optimization algorithms and policy design.
-        </p>
-        <p class="small muted">
-          I work across mixed-integer programming, stochastic dynamic programming, and simulation-based evaluation,
-          motivated by healthcare staffing platforms (e.g., nurse-to-shift assignments).
+          I am a PhD candidate in Operations Research at Northwestern University (IEMS). My research focuses on
+          optimization and stochastic modeling for online matching platforms, motivated by healthcare staffing applications
+          such as nurse-to-shift assignments.
         </p>
 
-        <div class="pillrow" aria-label="Research keywords">
-          <span class="pill">Revenue management</span>
-          <span class="pill">Sequential decision-making</span>
-          <span class="pill">No-shows & overbooking</span>
-          <span class="pill">MILP / MIP reformulations</span>
-          <span class="pill">Stochastic optimization</span>
-          <span class="pill">Policy design</span>
-        </div>
-      </div>
+        <p>
+          I study sequential recommendation and assignment when agents arrive over time with heterogeneous preferences and
+          uncertain commitment (no-shows). My work develops policy structure results and scalable algorithms (MIP formulations,
+          decomposition, and heuristics) to maximize filled jobs and expected revenue under capacity constraints and overbooking.
+        </p>
 
-      <div class="card">
-        <div class="kicker">Current focus</div>
-        <ul class="small">
-          <li><strong>Online matching platforms:</strong> optimal job recommendation and capacity planning under uncertain attendance.</li>
-          <li><strong>Scalable methods:</strong> MIP formulations, decomposition, and heuristics for large instances.</li>
-          <li><strong>RL + queues:</strong> rollout-augmented lookahead policies in fork-join networks (separate line of work).</li>
-        </ul>
-
-        <div class="hr"></div>
-
-        <div class="kicker">Affiliation</div>
-        <div class="small">
-          Northwestern University · Industrial Engineering & Management Sciences<br />
-          Evanston, IL
-        </div>
-      </div>
-    </div>
-
-    <section id="research">
-      <h2>Research</h2>
-
-      <div class="two">
-        <div class="card">
-          <h2 style="margin:0 0 6px;font-size:16px;">Sequential job recommendation under uncertainty</h2>
-          <p class="small muted">
-            I study online platforms where agents arrive over time and must be recommended limited-capacity jobs.
-            Each agent may decline or accept and later no-show; cancellations can render capacity unsellable.
-            The objective is to maximize filled jobs and expected revenue while respecting capacity requirements.
-          </p>
-          <ul class="small">
-            <li>Policy structure (nestedness, partially nested solutions)</li>
-            <li>Overbooking decisions to hedge no-shows</li>
-            <li>Preference models (independent and dependent choice)</li>
-            <li>Algorithmic approaches: MIP + heuristics + rollout/lookahead</li>
-          </ul>
-        </div>
+        <p>
+          I also work on reinforcement-learning–inspired decision policies (rollout-augmented lookahead) for fork-join queueing systems.
+        </p>
 
         <div class="card">
-          <h2 style="margin:0 0 6px;font-size:16px;">Algorithms & implementation</h2>
-          <p class="small muted">
-            My work emphasizes implementable, scalable methods for large problem sizes.
-          </p>
-          <ul class="small">
-            <li>MIP formulations (linear/quadratic/polynomial) and solver tuning</li>
-            <li>Reformulations (e.g., quadratization, linearization, piecewise approximation)</li>
-            <li>Decomposition and cut generation</li>
-            <li>Simulation framework for policy evaluation</li>
-          </ul>
-          <p class="note">
-            Tools: Python, Gurobi, AMPL, SQL/BigQuery, R.
-          </p>
+          <span class="badge">Interests</span>
+          <span class="badge">Optimization</span>
+          <span class="badge">Marketplace algorithms</span>
+          <span class="badge">Stochastic modeling</span>
+          <span class="badge">MIP / decomposition</span>
+          <span class="badge">Revenue management</span>
+          <div class="meta" style="margin-top:10px;">
+            Tools: Python, Gurobi, AMPL, SQL/BigQuery, R
+          </div>
         </div>
+
+        <hr/>
+
+        <div class="card">
+          <div class="meta"><strong>Update:</strong> Open to industry research/applied scientist roles in optimization/marketplace/revenue management.</div>
+        </div>
+
       </div>
-    </section>
-
-    <section id="publications">
-      <h2>Publications & Working Papers</h2>
-      <div class="muted small">Replace titles/links below with your exact paper titles and PDF URLs when ready.</div>
-
-      <div class="pub">
-        <div class="t">Optimal Sequential Job Recommendations with No-Shows</div>
-        <div class="m">Working paper · Operations Research / revenue management · 2026</div>
-        <div class="l">
-          <a href="#" target="_blank" rel="noopener">PDF</a> ·
-          <a href="#" target="_blank" rel="noopener">Abstract</a> ·
-          <a href="#" target="_blank" rel="noopener">Code</a>
-        </div>
-      </div>
-
-      <div class="pub">
-        <div class="t">Overbooking in Sequential Job Recommendation Platforms with No-Shows</div>
-        <div class="m">Working paper · Stochastic optimization · 2026</div>
-        <div class="l">
-          <a href="#" target="_blank" rel="noopener">PDF</a> ·
-          <a href="#" target="_blank" rel="noopener">Abstract</a>
-        </div>
-      </div>
-
-      <div class="pub">
-        <div class="t">Dependent Preferences in Online Matching and Job Recommendation</div>
-        <div class="m">Working paper · Choice modeling + optimization · 2026</div>
-        <div class="l">
-          <a href="#" target="_blank" rel="noopener">PDF</a>
-        </div>
-      </div>
-
-      <div class="pub">
-        <div class="t">Rollout-Augmented Lookahead Policies for Dynamic Join Decisions in Fork-Join Queues</div>
-        <div class="m">Working paper · Reinforcement learning + queueing · 2025/2026</div>
-        <div class="l">
-          <a href="#" target="_blank" rel="noopener">PDF</a> ·
-          <a href="#" target="_blank" rel="noopener">Code</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="teaching">
-      <h2>Teaching</h2>
-      <div class="card">
-        <ul class="small">
-          <li><strong>Teaching Assistant:</strong> MLDS 490-23 Healthcare Analytics (forecasting, optimization, simulation, survival analysis)</li>
-          <li><strong>Teaching Assistant:</strong> related analytics and OR coursework (R, Python, AMPL)</li>
-        </ul>
-        <div class="note">
-          You can add a “Materials” subsection here with links to slides, assignments, or public notebooks if you want.
-        </div>
-      </div>
-    </section>
-
-    <section id="industry">
-      <h2>Industry Experience</h2>
-      <div class="card">
-        <h2 style="margin:0 0 6px;font-size:16px;">Moloco — Data Science Intern (Ads Marketplace)</h2>
-        <div class="small muted">
-          Built evaluation frameworks and metrics using SQL/BigQuery and Python; analyzed auction mechanisms and revenue efficiency;
-          performed statistical analysis and confidence intervals for large-scale experimentation.
-        </div>
-        <ul class="small">
-          <li>Designed robust metrics and reporting pipelines for sampled large tables</li>
-          <li>Bootstrapped uncertainty estimates for key performance metrics</li>
-          <li>Collaborated with applied scientists and engineers to translate analyses into product decisions</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="cv">
-      <h2>CV</h2>
-      <div class="card">
-        <p class="small">
-          Add your PDF CV to this repo as <code>cv.pdf</code>, then link it here.
-        </p>
-        <div class="btnrow">
-          <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
-        </div>
-        <div class="note">
-          How: in your repo → <strong>Add file</strong> → <strong>Upload files</strong> → upload your CV as <code>cv.pdf</code> → commit.
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <div class="small">
-          <strong>Email:</strong> hedieh.sazvar@northwestern.edu<br />
-          <strong>GitHub:</strong> <a href="https://github.com/hediehsazvar" target="_blank" rel="noopener">github.com/hediehsazvar</a><br />
-          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank" rel="noopener">linkedin.com</a>
-        </div>
-        <div class="note">
-          Replace the LinkedIn link with your actual profile URL.
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="y"></span> Hedieh Sazvar · Built with GitHub Pages
-    </footer>
+    </main>
 
   </div>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
