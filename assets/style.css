@@ -60,28 +60,26 @@ body{
 }
 
 .brand-logo{
-  height: 86px;     /* bigger */
-  width:auto;
-  display:block;
+  width: 240px;     /* makes it wider */
+  height: auto;     /* preserves aspect ratio */
+  max-width: 100%;
+  display: block;
 }
 
 /* ---------- Portrait (more curved than your oval) ---------- */
 /* This is NOT an ellipse. It's a very rounded "squircle" frame. */
 .avatar{
-  width: 250px;
-  height: 310px;
+  width: 240px;
+  height: 320px;          /* taller = more oval portrait */
   display:block;
   margin: 16px auto 14px;
 
   object-fit: cover;
 
-  /* more curved, "squircle-like" */
-  border-radius: 64px;
-
+  border-radius: 999px;   /* true ellipse (most oval) */
   border: 2px solid rgba(78,42,132,0.35);
   background:#fff;
 
-  /* minimal shadow (not heavy) */
   box-shadow: 0 10px 24px rgba(17,24,39,0.10);
 }
 
