@@ -70,8 +70,8 @@ body{
 /* ---------- Portrait (true oval / ellipse) ---------- */
 /* Less flat sides = ellipse with border-radius:999px */
 .avatar{
-  width: 240px;
-  height: 320px;        /* taller portrait oval */
+  width: 270px;
+  height: 310px;        /* taller portrait oval */
   display:block;
   margin: 16px auto 14px;
 
