@@ -1,174 +1,246 @@
+/* =========================================================
+   Minimalist (pure white) + Northwestern purple
+   Ellipsoid framed portrait
+   ========================================================= */
+
 :root{
-  --bg:#0b0f19;
-  --panel:#0f1629;
-  --text:#f8fafc;
-  --muted:#cbd5e1;
-  --border: rgba(148,163,184,0.18);
+  --nu-purple:#4E2A84;
+  --nu-purple-dark:#3b1f66;
 
-  --accent:#a78bfa;      /* lavender */
-  --accent2:#22c55e;     /* small accent */
-  --content-max: 980px;
+  --bg:#ffffff;          /* pure white */
+  --panel:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --border:#e5e7eb;
 
-  --shadow: 0 30px 80px rgba(0,0,0,0.50);
+  --content-max: 900px;
+  --sidebar-w: 300px;
 }
 
-html,body{margin:0;padding:0;width:100%;overflow-x:hidden;background:var(--bg);color:var(--text);}
-*{box-sizing:border-box;max-width:100%;}
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x:hidden;
+}
+
+*{
+  box-sizing:border-box;
+  max-width:100%;
+}
 
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   line-height: 1.85;
 }
 
-/* Layout */
+/* ---------------- Layout ---------------- */
 .page{
   display:grid;
-  grid-template-columns: 330px minmax(0, 1fr);
+  grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
   min-height: 100vh;
 }
 
 .sidebar{
-  background: linear-gradient(180deg, #0a0f1c, #0f1629);
+  background: var(--panel);
   border-right: 1px solid var(--border);
-  padding: 24px 18px;
+  padding: 22px 18px;
 }
 
 .main{min-width:0;}
 
-/* Logo */
-.brand{display:flex;align-items:center;justify-content:flex-start;gap:10px;margin-bottom:14px;}
-.brand-logo{height:58px;width:auto;display:block; filter: drop-shadow(0 10px 16px rgba(0,0,0,0.45));}
-
-/* Magazine cutout / polaroid effect */
-.avatar{
-  width: 260px;
-  height: 320px;
-  object-fit: cover;
-  display:block;
-  margin: 16px auto 18px;
-
-  border-radius: 18px;
-  background: #ffffff;
-  padding: 10px;                 /* white mat */
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: var(--shadow);
-
-  /* subtle tilt without HTML */
-  transform: rotate(-2.2deg);
+/* ---------------- Sidebar brand/logo ---------------- */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom: 14px;
 }
 
+.brand-logo{
+  height: 64px;      /* larger by default */
+  width:auto;
+  display:block;
+}
+
+/* ---------------- Photo: framed ellipsoid ----------------
+   Ellipse shape uses fixed width/height.
+   If you want it taller/shorter, change height.
+*/
+.avatar{
+  width: 240px;
+  height: 300px;               /* ellipsoid portrait */
+  object-fit: cover;           /* clean portrait crop */
+  display:block;
+  margin: 14px auto 14px;
+
+  border-radius: 999px;        /* ellipse */
+  background: #ffffff;
+
+  /* minimalist frame */
+  border: 2px solid rgba(78,42,132,0.35);
+
+  /* subtle inner mat */
+  padding: 8px;
+
+  /* ultra-light shadow (still minimalist) */
+  box-shadow: 0 10px 28px rgba(17,24,39,0.10);
+}
+
+/* ---------------- Sidebar text ---------------- */
 .side-name{
   text-align:center;
-  font-weight: 950;
+  font-weight: 900;
   font-size: 22px;
   margin: 10px 0 4px;
-  letter-spacing: -0.02em;
-  color: #fff;
+  letter-spacing: -0.01em;
+  color: var(--nu-purple-dark);
 }
 
-.side-role,.side-affil{
+.side-role, .side-affil{
   text-align:center;
-  color: var(--muted);
   font-size: 13.5px;
+  color: var(--muted);
 }
 
+.side-affil{margin-top:6px;}
+
+/* ---------------- Contact block ---------------- */
 .side-section-title{
   margin-top: 22px;
   padding-top: 16px;
   border-top: 1px solid var(--border);
   text-align:center;
   font-weight: 900;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
   font-size: 12px;
-  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--nu-purple);
 }
 
-/* Icons */
-.side-icons{display:flex;justify-content:center;gap:12px;margin-top:12px;}
+.side-icons{
+  display:flex;
+  justify-content:center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
 .iconbtn{
-  width:46px;height:46px;
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.06);
-  display:flex;align-items:center;justify-content:center;
+  width:44px;
+  height:44px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-decoration:none;
 }
-.iconbtn:hover{background: rgba(255,255,255,0.10);}
-.iconbtn svg{width:20px;height:20px;fill: var(--accent);}
 
-/* Topbar: thin, modern */
+.iconbtn:hover{
+  border-color: rgba(78,42,132,0.35);
+}
+
+.iconbtn svg{
+  width:20px;
+  height:20px;
+  fill: var(--nu-purple);
+}
+
+/* ---------------- Top navigation (purple) ---------------- */
 .topbar{
-  background: rgba(255,255,255,0.03);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: var(--nu-purple);
   position: sticky;
   top: 0;
   z-index: 20;
-  backdrop-filter: blur(10px);
 }
 
 .topnav{
-  max-width: var(--content-max);
+  max-width: 1100px;
   margin: 0 auto;
   display:flex;
-  justify-content:flex-end;
-  gap: 18px;
-  padding: 14px 20px;
-  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap: 22px;
+  padding: 14px 18px;
+  flex-wrap: wrap;
 }
 
 .topnav a{
   color: #fff !important;
-  text-decoration:none !important;
+  text-decoration: none !important;
   font-weight: 900;
-  font-size: 13px;
-  letter-spacing: 0.10em;
+  font-size: 14px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 10px 12px;
-  border-radius: 999px;
-  border: 1px solid transparent;
+
+  padding: 8px 10px;
+  border-bottom: 2px solid transparent;
 }
 
 .topnav a:hover{
-  border-color: rgba(255,255,255,0.18);
-  background: rgba(255,255,255,0.06);
+  border-bottom-color: rgba(255,255,255,0.70);
 }
 
 .topnav a.active{
-  background: rgba(167,139,250,0.18);
-  border-color: rgba(167,139,250,0.25);
-  color: #fff !important;
+  border-bottom-color: #fff;
 }
 
-/* Content */
+/* ---------------- Main content ---------------- */
 .content{
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 30px 20px 80px;
+  padding: 34px 22px 80px;
 }
 
 h1{
   font-size: 46px;
-  margin: 14px 0 18px;
-  letter-spacing: -0.03em;
   line-height: 1.1;
-  color: #fff;
+  letter-spacing: -0.03em;
+  margin: 14px 0 18px;
+  color: var(--nu-purple);
 }
 
 h2{
   font-size: 18px;
-  margin: 26px 0 10px;
-  color: #fff;
+  margin: 28px 0 10px;
+  color: var(--nu-purple-dark);
 }
 
-p,li{font-size: 15.7px; color: rgba(248,250,252,0.92);}
-a{color: var(--accent);}
+p, li{
+  font-size: 15.8px;
+  color: var(--text);
+}
 
-.meta{color: rgba(203,213,225,0.92); font-size: 13.5px;}
+a{
+  color: var(--nu-purple);
+}
 
+/* tidy lists */
+ul{padding-left: 18px; margin-top: 8px;}
+li{margin: 6px 0;}
+
+.meta{
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+/* ---------------- PDF iframe in CV ---------------- */
+iframe{
+  border: 1px solid var(--border) !important;
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* ---------------- Responsive ---------------- */
 @media (max-width: 900px){
   .page{grid-template-columns: 1fr;}
-  .sidebar{border-right:none;border-bottom: 1px solid rgba(255,255,255,0.10);}
-  .topnav{justify-content:center;}
-  .avatar{transform:none;}
+  .sidebar{
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .brand{justify-content:center;}
+  .content{padding: 26px 18px 70px;}
 }
