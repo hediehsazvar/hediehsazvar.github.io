@@ -184,32 +184,47 @@ body{
 }
 
 /* ---------- Content ---------- */
+/* ===== Style A: Clean academic ===== */
+:root{
+  --page-max: 860px;         /* narrower = tidier */
+  --radius: 12px;
+}
+
 .content{
-  max-width: 1100px;
+  max-width: var(--page-max);
   margin: 0 auto;
-  padding: 24px 18px 60px;
-  width: 100%;
-  min-width: 0;
+  padding: 34px 26px 70px;
 }
 
 h1{
+  font-size: 44px;
+  letter-spacing: -0.02em;
   margin: 18px 0 18px;
-  font-size: 48px;
-  color: var(--nu-purple);
-  line-height: 1.1;
 }
 
 h2{
-  margin: 24px 0 10px;
-  font-size: 20px;
-  color: var(--nu-purple-dark);
+  font-size: 18px;
+  margin: 26px 0 10px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
 }
 
-p{ margin: 0 0 16px; }
+p, li{
+  font-size: 15.5px;
+  line-height: 1.85;
+}
 
-.meta{
-  color: var(--muted);
-  font-size: 13.5px;
+.sidebar{
+  padding: 22px 18px;
+}
+
+.topbar{
+  position: sticky;
+  top: 0;
+}
+
+.topnav{
+  max-width: var(--page-max);
 }
 
 /* ---------- Mobile ---------- */
