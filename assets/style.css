@@ -1,8 +1,9 @@
 /* =========================================================
-   Minimalist Pure-White + Purple Typography Nav (no purple bg)
-   - Menu items spread across
+   Minimalist White Theme
+   - No purple background
+   - Purple menu text, spread across
    - Bigger Northwestern logo
-   - Portrait: more curved ellipse + light frame
+   - "More curved" portrait frame (squircle / highly rounded)
    ========================================================= */
 
 :root{
@@ -36,60 +37,61 @@ body{
 /* ---------- Layout ---------- */
 .page{
   display:grid;
-  grid-template-columns: 310px minmax(0, 1fr);
+  grid-template-columns: 320px minmax(0, 1fr);
   min-height:100vh;
-  background:#fff;
+  background: var(--bg);
 }
 
 .sidebar{
-  background:#fff;
+  background: var(--bg);
   border-right: 1px solid var(--border);
   padding: 22px 18px;
 }
 
-.main{ min-width:0; background:#fff; }
+.main{ min-width:0; background: var(--bg); }
 
-/* ---------- Northwestern logo bigger ---------- */
+/* ---------- Northwestern logo (bigger) ---------- */
 .brand{
   display:flex;
   align-items:center;
   justify-content:flex-start;
-  gap:10px;
+  gap:12px;
   margin-bottom: 14px;
 }
 
 .brand-logo{
-  height: 82px;       /* bigger */
+  height: 86px;     /* bigger */
   width:auto;
   display:block;
 }
 
-/* ---------- Portrait: MORE curved ellipse ---------- */
-/* “Not curved enough” usually means height/width too similar.
-   We exaggerate ellipse by making it taller and fully rounded. */
+/* ---------- Portrait (more curved than your oval) ---------- */
+/* This is NOT an ellipse. It's a very rounded "squircle" frame. */
 .avatar{
-  width: 220px;
-  height: 320px;          /* taller => stronger ellipse curvature */
+  width: 250px;
+  height: 310px;
   display:block;
-  margin: 14px auto 14px;
+  margin: 16px auto 14px;
 
   object-fit: cover;
-  border-radius: 9999px;  /* maximum curvature */
 
-  border: 1px solid rgba(78,42,132,0.28);
+  /* more curved, "squircle-like" */
+  border-radius: 64px;
+
+  border: 2px solid rgba(78,42,132,0.35);
   background:#fff;
 
-  /* Reserve paint + avoid heavy effects (faster) */
-  box-shadow: none;
+  /* minimal shadow (not heavy) */
+  box-shadow: 0 10px 24px rgba(17,24,39,0.10);
 }
 
-/* Sidebar text */
+/* ---------- Sidebar text ---------- */
 .side-name{
   text-align:center;
   font-weight: 900;
   font-size: 21px;
   margin: 10px 0 4px;
-  letter-spacing:-0.01em;
+  letter-spacing: -0.01em;
   color: var(--nu-purple-dark);
 }
 
@@ -106,7 +108,6 @@ body{
   padding-top: 16px;
   border-top: 1px solid var(--border);
   text-align:center;
-
   font-weight: 900;
   font-size: 12px;
   letter-spacing: 0.14em;
@@ -114,7 +115,7 @@ body{
   color: var(--nu-purple);
 }
 
-/* Contact icons (minimal) */
+/* ---------- Contact icons (minimal) ---------- */
 .side-icons{
   display:flex;
   justify-content:center;
@@ -128,7 +129,6 @@ body{
   border-radius: 999px;
   border: 1px solid var(--border);
   background:#fff;
-
   display:flex;
   align-items:center;
   justify-content:center;
@@ -143,59 +143,52 @@ body{
   fill: var(--nu-purple);
 }
 
-/* ---------- Top nav: NO purple background, purple text, spread across ---------- */
+/* ---------- Top nav: white background, purple text, spread across ---------- */
 .topbar{
-  background:#fff;                       /* pure white */
+  background: var(--bg);               /* white */
   border-bottom: 1px solid var(--border);
   position: sticky;
-  top: 0;
-  z-index: 20;
+  top:0;
+  z-index:20;
 }
 
-/* Spread items across:
-   - justify-content: space-between
-   - we also set a max width and full width container */
 .topnav{
-  max-width: var(--content-max);
+  max-width: 1100px;
   margin: 0 auto;
-  width: 100%;
+  padding: 14px 22px;
 
   display:flex;
+  justify-content: space-between;      /* spread across */
   align-items:center;
-  justify-content: space-between;        /* spread across */
-  gap: 18px;
-
-  padding: 14px 22px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 .topnav a{
-  color: var(--nu-purple) !important;    /* purple menu text */
+  color: var(--nu-purple) !important;  /* purple font */
   text-decoration:none !important;
   font-weight: 900;
   font-size: 13.5px;
   letter-spacing: 0.10em;
   text-transform: uppercase;
 
-  padding: 8px 0;
+  padding: 6px 0;
   border-bottom: 2px solid transparent;
 }
 
-.topnav a:hover{ border-bottom-color: rgba(78,42,132,0.35); }
+.topnav a:hover{
+  border-bottom-color: rgba(78,42,132,0.35);
+}
 
 .topnav a.active{
   border-bottom-color: var(--nu-purple);
 }
 
-/* ---------- Content (tidier width, no huge empty space) ---------- */
+/* ---------- Content ---------- */
 .content{
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 32px 22px 80px;
-
-  /* speeds rendering on long pages */
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 1200px;
+  padding: 34px 22px 80px;
 }
 
 h1{
@@ -219,7 +212,10 @@ p, li{
 
 a{ color: var(--nu-purple); }
 
-.meta{ color: var(--muted); font-size: 13.5px; }
+.meta{
+  color: var(--muted);
+  font-size: 13.5px;
+}
 
 /* ---------- Mobile ---------- */
 @media (max-width: 900px){
@@ -229,8 +225,9 @@ a{ color: var(--nu-purple); }
     border-bottom: 1px solid var(--border);
   }
   .topnav{
-    justify-content: center;   /* on small screens, center nav */
-    gap: 14px;
+    justify-content: center; /* spread across doesn't fit on small screens */
   }
-  .content{ padding: 26px 18px 60px; }
+  .content{
+    padding: 26px 18px 60px;
+  }
 }
