@@ -73,7 +73,7 @@ body{
   width: 240px;
   height: 320px;        /* taller portrait oval */
   display:block;
-  margin: 16px auto 14px;
+  margin: 4px auto 3px;
 
   object-fit: cover;
   border-radius: 999px; /* TRUE OVAL */
