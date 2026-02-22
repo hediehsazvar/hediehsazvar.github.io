@@ -70,16 +70,16 @@ body{
 /* ---------- Portrait (true oval / ellipse) ---------- */
 /* Less flat sides = ellipse with border-radius:999px */
 .avatar{
-  width: 270px;
+  width: 280px;
   height: 300px;        /* taller portrait oval */
   display:block;
-  margin: 4px auto 3px;
+  margin: 0px auto 0px;
 
   object-fit: cover;
   border-radius: 999px; /* TRUE OVAL */
 
   border: 0px solid rgba(78,42,132,0.35);
-  outline: 10px solid rgba(78,42,132,0.07);
+  outline: 0px solid rgba(78,42,132,0.07);
   background:#fff;
 
   /* minimal shadow */
