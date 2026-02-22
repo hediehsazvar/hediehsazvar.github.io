@@ -68,15 +68,19 @@ body{
 
 /* ---------- Portrait (true oval, NO frame) ---------- */
 .avatar{
-  width: 240px;
-  height: 320px;
+  width: 230px;
+  height: 340px;
   display:block;
   margin: 16px auto 14px;
 
   object-fit: cover;
-  border-radius: 980px;
 
-  /* remove frame */
+  /* TRUE ellipse (no flat sides) */
+  border-radius: 0;
+  -webkit-clip-path: ellipse(46% 50% at 50% 50%);
+  clip-path: ellipse(46% 50% at 50% 50%);
+
+  /* no frame */
   border: none;
   outline: none;
   box-shadow: none;
