@@ -1,113 +1,110 @@
 :root{
+  --bg:#ffffff;
+  --panel:#ffffff;
+  --text:#0b1220;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+
   --accent:#4E2A84;
-  --ink:#0b1220;
-  --muted:#64748b;
+  --accent2:#111827;
 
-  --bg1:#fbf7ff;
-  --bg2:#f6fbff;
-
-  --panel: rgba(255,255,255,0.75);
-  --border: rgba(148,163,184,0.35);
-
-  --content-max: 960px;
+  --radius: 18px;
+  --content-max: 880px;
 }
 
-html,body{margin:0;padding:0;width:100%;overflow-x:hidden;}
+html,body{margin:0;padding:0;width:100%;overflow-x:hidden;background:var(--bg);color:var(--text);}
 *{box-sizing:border-box;max-width:100%;}
 
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  color: var(--ink);
-  background: radial-gradient(1200px 800px at 20% 10%, var(--bg1), transparent 60%),
-              radial-gradient(1200px 800px at 80% 10%, var(--bg2), transparent 60%),
-              #ffffff;
-  line-height: 1.85;
+  line-height:1.8;
 }
 
-/* Layout */
+/* Layout: make sidebar feel like a compact left header */
 .page{
   display:grid;
-  grid-template-columns: 310px minmax(0, 1fr);
-  min-height: 100vh;
+  grid-template-columns: 260px minmax(0, 1fr);
+  min-height:100vh;
 }
 
 .sidebar{
-  padding: 22px 18px;
+  background: var(--panel);
   border-right: 1px solid var(--border);
-  background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(255,255,255,0.55));
-  backdrop-filter: blur(8px);
+  padding: 20px 16px;
 }
 
 .main{min-width:0;}
 
 /* Logo */
-.brand{display:flex;align-items:center;justify-content:flex-start;gap:10px;margin-bottom:10px;}
-.brand-logo{height:60px;width:auto;display:block;}
+.brand{display:flex;align-items:center;justify-content:flex-start;gap:10px;margin-bottom:14px;}
+.brand-logo{height:54px;width:auto;display:block;}
 
-/* Elliptical portrait */
+/* PHOTO becomes the star: large, centered within sidebar area */
 .avatar{
-  width: 240px;
-  height: 300px;            /* ellipse */
+  width: 210px;
+  height: 210px;
   object-fit: cover;
   display:block;
-  margin: 16px auto 14px;
+  margin: 14px auto 14px;
 
-  border-radius: 999px;     /* turns rectangle into ellipse */
-  border: 1px solid rgba(78,42,132,0.35);
-  box-shadow: 0 30px 70px rgba(2,6,23,0.18);
+  /* rounded-rectangle frame */
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(2,6,23,0.18);
 
-  /* glow ring */
-  outline: 10px solid rgba(78,42,132,0.08);
+  /* subtle “mat” */
   background:#fff;
+  padding: 8px;
 }
 
-/* Sidebar text */
+/* Sidebar text becomes quiet */
 .side-name{
+  margin: 8px 0 4px;
   text-align:center;
-  font-weight: 950;
-  font-size: 22px;
-  margin: 10px 0 4px;
-  letter-spacing: -0.02em;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: -0.01em;
 }
 
 .side-role,.side-affil{
   text-align:center;
-  color: var(--muted);
   font-size: 13.5px;
+  color: var(--muted);
 }
 
 .side-section-title{
-  margin-top: 22px;
-  padding-top: 16px;
+  margin-top: 18px;
+  padding-top: 14px;
   border-top: 1px solid var(--border);
   text-align:center;
-  font-weight: 900;
-  letter-spacing: 0.14em;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 12px;
   color: var(--accent);
 }
 
-.side-icons{display:flex;justify-content:center;gap:12px;margin-top:12px;}
+/* Icons: minimal */
+.side-icons{display:flex;justify-content:center;gap:10px;margin-top:12px;}
 .iconbtn{
-  width:46px;height:46px;
-  border-radius: 18px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.75);
+  width:44px;height:44px;
+  border-radius: 999px;
+  border:1px solid var(--border);
+  background:#fff;
   display:flex;align-items:center;justify-content:center;
   text-decoration:none;
 }
-.iconbtn:hover{transform: translateY(-1px); box-shadow: 0 16px 30px rgba(2,6,23,0.10);}
-.iconbtn svg{width:20px;height:20px;fill: var(--accent);}
+.iconbtn:hover{transform: translateY(-1px); box-shadow: 0 10px 22px rgba(2,6,23,0.12);}
+.iconbtn svg{width:20px;height:20px;fill:var(--accent);}
 
-/* Topbar: glass */
+/* Top menu: ultra minimal text with underline */
 .topbar{
+  background: transparent;
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255,255,255,0.72);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
 }
 
 .topnav{
@@ -116,53 +113,54 @@ body{
   display:flex;
   justify-content:flex-end;
   align-items:center;
-  gap: 16px;
-  padding: 14px 20px;
-  flex-wrap:wrap;
+  gap: 22px;
+  padding: 16px 20px;
+  flex-wrap: wrap;
 }
 
 .topnav a{
-  color: var(--ink) !important;
+  color: var(--accent2) !important;
   text-decoration:none !important;
   font-weight: 900;
-  font-size: 13px;
-  letter-spacing: 0.08em;
+  font-size: 13.5px;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 10px 12px;
-  border-radius: 999px;
-  border: 1px solid transparent;
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
 }
 
-.topnav a:hover{border-color: rgba(15,23,42,0.15); background: rgba(78,42,132,0.06);}
-.topnav a.active{background: rgba(78,42,132,0.12); border-color: rgba(78,42,132,0.20); color: var(--accent) !important;}
+.topnav a:hover{border-bottom-color: rgba(17,24,39,0.35);}
+.topnav a.active{border-bottom-color: var(--accent);}
 
+/* Content: centered, airy */
 .content{
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 30px 20px 80px;
+  padding: 34px 20px 80px;
 }
 
 h1{
   font-size: 46px;
-  margin: 12px 0 18px;
+  line-height: 1.1;
   letter-spacing: -0.03em;
+  margin: 10px 0 18px;
   color: var(--accent);
-  line-height:1.1;
 }
 
 h2{
   font-size: 18px;
-  margin: 26px 0 10px;
-  color: var(--ink);
+  margin: 28px 0 10px;
+  color: var(--text);
+  letter-spacing: -0.01em;
 }
 
-p,li{font-size: 15.7px;}
+p,li{font-size: 15.8px;}
 a{color: var(--accent);}
 
-.meta{color: var(--muted); font-size: 13.5px;}
+.meta{color:var(--muted); font-size: 13.5px;}
 
 @media (max-width: 900px){
   .page{grid-template-columns: 1fr;}
-  .sidebar{border-right:none;border-bottom: 1px solid var(--border);}
+  .sidebar{border-right:none;border-bottom:1px solid var(--border);}
   .topnav{justify-content:center;}
 }
