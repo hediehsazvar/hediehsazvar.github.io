@@ -6,26 +6,56 @@
   <title>Hedieh Sazvar | Research</title>
   <link rel="stylesheet" href="assets/style.css"/>
 
-  <!-- Abstract styling -->
+  <!-- Modal styling -->
   <style>
 
-    .abstract {
-      font-size: 13px;
-      color: #666;
-      line-height: 1.6;
-
-      margin-left: 22px;
-      padding-left: 14px;
-
-      border-left: 2px solid #ddd;
-
-      margin-top: 4px;
-      margin-bottom: 18px;
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.25);
     }
 
-    .abstract strong {
-      color: #444;
-      font-weight: 600;
+    .modal-content {
+
+      background-color: white;
+      margin: 6% auto;
+      padding: 26px;
+
+      width: 750px;
+      max-width: 90%;
+
+      border-radius: 6px;
+
+      box-shadow: 0 6px 30px rgba(0,0,0,0.25);
+
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
+
+      max-height: 75vh;
+      overflow-y: auto;
+
+    }
+
+    .modal-content h3 {
+      margin-top: 0;
+      color: #4E2A84;
+    }
+
+    .close {
+      float: right;
+      font-size: 22px;
+      cursor: pointer;
+      color: #666;
+    }
+
+    .close:hover {
+      color: black;
     }
 
   </style>
@@ -33,209 +63,219 @@
 </head>
 
 <body>
-  <div class="page">
 
-    <aside class="sidebar">
+<div class="page">
 
-      <div class="brand">
-        <img class="brand-logo"
-             src="assets/northwestern-logo.png"
-             alt="Northwestern University"
-             onerror="this.style.display='none'; document.getElementById('brandText').style.display='block';">
+<aside class="sidebar">
 
-        <div id="brandText" class="brand-text" style="display:none;">
-          NORTHWESTERN
-        </div>
-      </div>
+<div class="brand">
+<img class="brand-logo"
+src="assets/northwestern-logo.png"
+alt="Northwestern University">
+</div>
 
-      <img class="avatar" src="assets/headshot.JPG" alt="Hedieh Sazvar">
+<img class="avatar" src="assets/headshot.JPG">
 
-      <h2 class="side-name">Hedieh Sazvar</h2>
+<h2 class="side-name">Hedieh Sazvar</h2>
 
-      <div class="side-role">
-        PhD Candidate
-      </div>
+<div class="side-role">
+PhD Candidate
+</div>
 
-      <div class="side-affil">
-        Operations Research (IEMS)<br/>
-        Northwestern University
-      </div>
+<div class="side-affil">
+Operations Research (IEMS)<br>
+Northwestern University
+</div>
 
-      <div class="side-section-title">Contact</div>
+<div class="side-section-title">Contact</div>
 
-      <div class="side-icons">
+<div class="side-icons">
 
-        <a class="iconbtn"
-           href="mailto:hedieh.sazvar@northwestern.edu">
-          Email
-        </a>
+<a class="iconbtn"
+href="mailto:hedieh.sazvar@northwestern.edu">
+Email
+</a>
 
-        <a class="iconbtn"
-           href="https://www.linkedin.com/in/hedieh-sazvar/"
-           target="_blank">
-          LinkedIn
-        </a>
+<a class="iconbtn"
+href="https://www.linkedin.com/in/hedieh-sazvar/"
+target="_blank">
+LinkedIn
+</a>
 
-      </div>
+</div>
 
-    </aside>
+</aside>
 
 
-    <main class="main">
+<main class="main">
 
-      <div class="topbar">
+<div class="topbar">
 
-        <div class="topnav">
-          <a href="/" class="navlink">Home</a>
-          <a href="/research.html" class="navlink active">Research</a>
-          <a href="/cv.html" class="navlink">CV</a>
-        </div>
+<div class="topnav">
+<a href="/" class="navlink">Home</a>
+<a href="/research.html" class="navlink active">Research</a>
+<a href="/cv.html" class="navlink">CV</a>
+</div>
 
-      </div>
-
-
-      <div class="content">
-
-        <h1>Research</h1>
+</div>
 
 
-        <h2>Sequential job recommendation under no-shows</h2>
+<div class="content">
 
-        <p>
-          I study online matching platforms where agents arrive sequentially and the platform recommends limited-capacity jobs under
-          uncertain commitment (no-shows). My work characterizes the structure of optimal recommendation and overbooking policies and
-          develops scalable optimization methods to maximize filled jobs and expected revenue.
-        </p>
-
-        <p class="meta">
-          Keywords: revenue management · no-shows · overbooking · sequential decision-making · stochastic optimization · 0–1 polynomial programming
-        </p>
+<h1>Research</h1>
 
 
+<h2>Sequential job recommendation under no-shows</h2>
 
-        <h2>Working papers</h2>
+<p>
+I study online matching platforms where agents arrive sequentially and the platform recommends limited-capacity jobs under uncertain commitment (no-shows). My work characterizes the structure of optimal recommendation and overbooking policies and develops scalable optimization methods to maximize filled jobs and expected revenue.
+</p>
 
-
-        <p>
-          <strong>Optimal Sequential Job Recommendations with No-Shows</strong><br/>
-          <span class="meta">
-            Hedieh Sazvar, Seyed M.R. Iravani, Sanjay Mehrotra<br/>
-            In preparation for submission to Manufacturing & Service Operations Management.
-          </span>
-        </p>
-
-        <div class="abstract">
-
-          <strong>Abstract.</strong>
-          Problem definition: The increasing reliance on online platforms to match job opportunities with agents highlights the need
-          for job recommendation policies. Our model accounts for heterogeneous preferences and commitment probabilities for each agent-job
-          pair, as well as varying numbers of agents required across jobs. Agents arrive sequentially and sign up for preferred jobs from the set
-          recommended to them. The objective is to maximize the revenue earned when agents complete their jobs.
-          Methodology: We formulate the problem as an unconstrained 0-1 polynomial program. with a full-degree objective function. We
-          decompose the polynomial objective function into smaller components and develop an efficient recursive method to evaluate it. Leveraging 
-          this decomposition, we characterize structural properties of optimal recommendation policies and develop exact and heuristic
-          solution methods.
-          Results: For jobs requiring a single agent, we characterize an optimal threshold policy and develop a backward-induction algorithm that
-          yields a strongly polynomial-time exact solution. For jobs requiring multiple agents, we establish a nested optimal-solution structure
-          and develop an efficient stepwise heuristic. We also study a setting in which agents may sign up for jobs, but after observing signups, the
-          platform decides which agents receive offers and in what order; we analytically derive the optimal offering sequence and the offering
-          policy. Computationally, our heuristics achieve near-optimal expected revenue while standard heuristics incur substantial optimality
-          gaps or become infeasible as problem size increases. Relative to the show-to-all policy used in current practice, our methods deliver
-          significant revenue improvements. We further quantify the value of arrival-sequence predictability and find that predicting only the last
-          few arrivals captures a large fraction of the full-predictability value.
-          Managerial implications: This framework applies broadly to job-agent matching platforms, including nurse-shift, freelance, and volunteer matching platforms, 
-          and enables personalized and selective recommendations that improve expected revenue under no-shows.
-
-        </div>
+<p class="meta">
+Keywords: revenue management · no-shows · overbooking · sequential decision-making · stochastic optimization · 0–1 polynomial programming
+</p>
 
 
-
-        <p>
-          <strong>Overbooking in Sequential Job Recommendation Platforms with No-Shows</strong><br/>
-          <span class="meta">
-            Hedieh Sazvar, Seyed M.R. Iravani, Sanjay Mehrotra<br/>
-            In preparation for submission.
-          </span>
-        </p>
-
-        <div class="abstract">
-
-          <strong>Abstract.</strong>
-          The increasing reliance on online platforms to match job opportunities with agents across various industries 
-            highlights the need for efficient job recommendation policies. This paper extends our prior work on sequential job recommendation 
-            with different preferences and commitment probabilities for each agent-job pair, as well as the varying numbers of agents required for different jobs. 
-            The model allows more agents to sign up for each job than are required, thereby mitigating the risk of absenteeism. The objective is to maximize 
-            the platform’s expected revenue, which is earned when agents complete their jobs. The resulting optimization problem is a high-degree binary polynomial program.
-            We reformulate the objective so that it can be evaluated in polynomial time and embed this evaluation in a mixed-integer program that provides exact solutions for moderate-sized instances.
-            For larger instances, we develop a heuristic algorithm that exploits structural properties of the optimal solution to generate near-optimal policies efficiently. 
-            Computational experiments demonstrate that overbooking can substantially improve expected revenue compared with non-overbooking policies.
-
-        </div>
+<h2>Working papers</h2>
 
 
+<p>
+<strong>Optimal Sequential Job Recommendations with No-Shows</strong><br/>
+<span class="meta">
+Hedieh Sazvar, Seyed M.R. Iravani, Sanjay Mehrotra<br/>
+In preparation for submission to Manufacturing & Service Operations Management.
+· <a href="#" onclick="openAbstract('abs1'); return false;">Abstract</a>
+</span>
+</p>
 
-        <p>
-          <strong>Optimization Models and their Reformulations in Job Recommender System with Dependent Preferences and No-Shows.</strong><br/>
-          <span class="meta">
-            Hedieh Sazvar, Seyed M.R. Iravani, Sanjay Mehrotra<br/>
-            Working paper.
-          </span>
-        </p>
 
-        <div class="abstract">
+<p>
+<strong>Overbooking in Sequential Job Recommendation Platforms with No-Shows</strong><br/>
+<span class="meta">
+Hedieh Sazvar, Seyed M.R. Iravani, Sanjay Mehrotra<br/>
+In preparation for submission.
+· <a href="#" onclick="openAbstract('abs2'); return false;">Abstract</a>
+</span>
+</p>
 
-          <strong>Abstract.</strong>
-          Online job-matching platforms, from nurse–shift staffing to freelance and volunteer services, face a revenue-management
-          problem in which the platform recommends jobs to sequentially arriving agents. Jobs can require multiple agents, agents are
-          heterogeneous in both preferences and commitment, and no-shows reduce the number of completed jobs. Overbooking, i.e.,
-          allowing more agents to sign up than are ultimately required, mitigates no-shows but induces dependence across recommendation
-          decisions and significantly increases computational complexity. Our prior work addressed this setting under
-          independent preferences by characterizing optimal recommendation policies and developing exact and heuristic solution methods
-          for deterministic and stochastic arrival sequences.
-          We extend this framework to dependent preferences by modeling an agent’s sign-up decision as a function of the entire recommended
-          set through discrete choice models. We consider three choice models—the multinomial logit model, the Markov chain choice
-          model, and the exponomial model—and, for each, derive an exact mixed-integer programming reformulation of the recommendation
-          problem with heterogeneous agents, varying numbers of agents required across jobs, no-shows, and overbooking. We strengthen these
-          formulations using constructive heuristics and valid inequalities that exploit problem structure. A computational study quantifies the
-          impact of dependent preferences relative to independence-based benchmarks and demonstrates that the strengthened formulations
-          remain tractable for real-world instance sizes.
 
-        </div>
+<p>
+<strong>Optimization Models and their Reformulations in Job Recommender System with Dependent Preferences and No-Shows.</strong><br/>
+<span class="meta">
+Hedieh Sazvar, Seyed M.R. Iravani, Sanjay Mehrotra<br/>
+Working paper.
+· <a href="#" onclick="openAbstract('abs3'); return false;">Abstract</a>
+</span>
+</p>
+
+
+<p>
+<strong>Rollout-Augmented Lookahead Policies for Dynamic Join Decisions in Fork-Join Queues</strong><br/>
+<span class="meta">
+Hedieh Sazvar<br/>
+In preparation for submission.
+· <a href="#" onclick="openAbstract('abs4'); return false;">Abstract</a>
+</span>
+</p>
+
+
+</div>
+</main>
+</div>
+
+
+<!-- FULL ABSTRACTS -->
+
+
+<div id="abs1" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeAbstract('abs1')">&times;</span>
+<h3>Abstract</h3>
+
+<p>
+<strong>Problem definition:</strong> The increasing reliance on online platforms to match job opportunities with agents highlights the need for job recommendation policies. Our model accounts for heterogeneous preferences and commitment probabilities for each agent-job pair, as well as varying numbers of agents required across jobs. Agents arrive sequentially and sign up for preferred jobs from the set recommended to them. The objective is to maximize the revenue earned when agents complete their jobs.
+</p>
+
+<p>
+<strong>Methodology:</strong> We formulate the problem as an unconstrained 0–1 polynomial program with a full-degree objective function. We decompose the polynomial objective function into smaller components and develop an efficient recursive method to evaluate it. Leveraging this decomposition, we characterize structural properties of optimal recommendation policies and develop exact and heuristic solution methods.
+</p>
+
+<p>
+<strong>Results:</strong> For jobs requiring a single agent, we characterize an optimal threshold policy and develop a backward-induction algorithm that yields a strongly polynomial-time exact solution. For jobs requiring multiple agents, we establish a nested optimal-solution structure and develop an efficient stepwise heuristic. We also study a setting in which agents may sign up for jobs, but after observing signups, the platform decides which agents receive offers and in what order; we analytically derive the optimal offering sequence and the offering policy. Computationally, our heuristics achieve near-optimal expected revenue while standard heuristics incur substantial optimality gaps or become infeasible as problem size increases. Relative to the show-to-all policy used in current practice, our methods deliver significant revenue improvements. We further quantify the value of arrival-sequence predictability and find that predicting only the last few arrivals captures a large fraction of the full-predictability value.
+</p>
+
+<p>
+<strong>Managerial implications:</strong> This framework applies broadly to job-agent matching platforms, including nurse-shift, freelance, and volunteer matching platforms, and enables personalized and selective recommendations that improve expected revenue under no-shows.
+</p>
+
+</div>
+</div>
 
 
 
-        <p>
-          <strong>Rollout-Augmented Lookahead Policies for Dynamic Join Decisions in Fork-Join Queues</strong><br/>
-          <span class="meta">
-            Hedieh Sazvar<br/>
-            In preparation for submission.
-          </span>
-        </p>
+<div id="abs2" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeAbstract('abs2')">&times;</span>
+<h3>Abstract</h3>
 
-        <div class="abstract">
+<p>
+The increasing reliance on online platforms to match job opportunities with agents across various industries highlights the need for efficient job recommendation policies. This paper extends our prior work on sequential job recommendation with different preferences and commitment probabilities for each agent-job pair, as well as the varying numbers of agents required for different jobs. The model allows more agents to sign up for each job than are required, thereby mitigating the risk of absenteeism. The objective is to maximize the platform’s expected revenue, which is earned when agents complete their jobs. The resulting optimization problem is a high-degree binary polynomial program. We reformulate the objective so that it can be evaluated in polynomial time and embed this evaluation in a mixed-integer program that provides exact solutions for moderate-sized instances. For larger instances, we develop a heuristic algorithm that exploits structural properties of the optimal solution to generate near-optimal policies efficiently. Computational experiments demonstrate that overbooking can substantially improve expected revenue compared with non-overbooking policies.
+</p>
 
-          <strong>Abstract.</strong>
-          Fork-join queues arise frequently in parallel service systems where each job is
-          evaluated by multiple servers, and the join decision must often be made before all
-          evaluations are complete. The key challenge is to determine when to stop collecting
-          additional information and make a final prediction, which balances service delay
-          against misclassification risk. We build on the threshold-based heuristic proposed
-          by Singla and Iravani (2024), and introduce a policy that augments this baseline
-          with a k-step lookahead and an H-step simulation-based rollout to better approximate
-          the cost-to-go. We compare this policy against the original heuristic and a
-          tabular Q-learning benchmark. Across a range of system parameters, we find that
-          even shallow lookahead and short rollout lengths lead to meaningful reductions
-          in long-run average cost. These results demonstrate the effectiveness of simple
-          approximate dynamic programming techniques in continuous-time decision models
-          with partial observations.
-        </div>
+</div>
+</div>
 
 
-      </div>
 
-    </main>
+<div id="abs3" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeAbstract('abs3')">&times;</span>
+<h3>Abstract</h3>
 
-  </div>
+<p>
+Online job-matching platforms, from nurse–shift staffing to freelance and volunteer services, face a revenue-management problem in which the platform recommends jobs to sequentially arriving agents. Jobs can require multiple agents, agents are heterogeneous in both preferences and commitment, and no-shows reduce the number of completed jobs. Overbooking mitigates no-shows but induces dependence across recommendation decisions and significantly increases computational complexity. We extend this framework to dependent preferences by modeling an agent’s sign-up decision using discrete choice models and derive exact mixed-integer programming reformulations. We strengthen these formulations using valid inequalities and scalable optimization techniques, enabling efficient solution of large-scale instances.
+</p>
+
+</div>
+</div>
+
+
+
+<div id="abs4" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeAbstract('abs4')">&times;</span>
+<h3>Abstract</h3>
+
+<p>
+Fork-join queues arise frequently in parallel service systems where each job is evaluated by multiple servers, and the join decision must often be made before all evaluations are complete. We introduce rollout-augmented lookahead policies that augment threshold heuristics with simulation-based rollout to better approximate the cost-to-go. Results demonstrate meaningful reductions in long-run average cost and highlight the effectiveness of approximate dynamic programming.
+</p>
+
+</div>
+</div>
+
+
+
+<script>
+
+function openAbstract(id)
+{
+document.getElementById(id).style.display = "block";
+}
+
+function closeAbstract(id)
+{
+document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event)
+{
+if(event.target.className === "modal")
+{
+event.target.style.display = "none";
+}
+}
+
+</script>
 
 </body>
 </html>
