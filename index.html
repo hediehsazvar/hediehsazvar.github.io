@@ -8,99 +8,115 @@
 </head>
 
 <body>
-  <div class="page">
 
-    <aside class="sidebar">
-      <div class="brand">
-        <img class="brand-logo" src="assets/northwestern-logo.png" alt="Northwestern University"
-             onerror="this.style.display='none'; document.getElementById('brandText').style.display='block';">
-        <div id="brandText" class="brand-text" style="display:none;">NORTHWESTERN</div>
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="brand">
+      <img class="brand-logo"
+           src="assets/northwestern-logo.png"
+           alt="Northwestern University"
+           onerror="this.style.display='none'; document.getElementById('brandText').style.display='block';">
+
+      <div id="brandText" class="brand-text" style="display:none;">
+        NORTHWESTERN
       </div>
+    </div>
 
-      <!-- YOUR REAL FILE NAME -->
-      <img class="avatar" src="assets/headshot.JPG" alt="Hedieh Sazvar">
+    <!-- Headshot -->
+    <img class="avatar" src="assets/headshot.JPG" alt="Hedieh Sazvar">
 
-      <h2 class="side-name">Hedieh Sazvar</h2>
-      <div class="side-role">PhD Candidate</div>
-      <div class="side-affil">
-        Operations Research (IEMS)<br/>
-        Northwestern University
-      </div>
+    <h2 class="side-name">Hedieh Sazvar</h2>
 
-      <div class="side-section-title">Contact</div>
-      <div class="side-icons">
-       <div class="side-section-title">Contact</div>
+    <div class="side-role">
+      PhD Candidate
+    </div>
 
-      <div class="side-icons">
-      
-        <div>
-          Email:<br>
-          <a href="mailto:hedieh.sazvar@northwestern.edu">
-            hedieh.sazvar@northwestern.edu
-          </a>
-        </div>
-      
-        <div style="margin-top:8px;">
-          LinkedIn:<br>
-          <a href="https://www.linkedin.com/in/hedieh-sazvar/" target="_blank">
-            linkedin.com/in/hedieh-sazvar
-          </a>
-        </div>
-      
-      </div>
-          <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM0.5 8.5H4.5V23H0.5V8.5ZM8.5 8.5H12.3V10.5H12.36C12.89 9.5 14.2 8.45 16.1 8.45C20.1 8.45 20.85 11.05 20.85 14.45V23H16.85V15.25C16.85 13.4 16.82 11.05 14.35 11.05C11.85 11.05 11.5 13 11.5 15.12V23H7.5V8.5H8.5Z"/></svg>
+    <div class="side-affil">
+      Operations Research (IEMS)<br/>
+      Northwestern University
+    </div>
+
+
+    <!-- CONTACT -->
+    <div class="side-section-title">Contact</div>
+
+    <div class="side-icons">
+
+      <p>
+        <strong>Email</strong><br>
+        <a href="mailto:hedieh.sazvar@northwestern.edu">
+          hedieh.sazvar@northwestern.edu
         </a>
+      </p>
+
+      <p>
+        <strong>LinkedIn</strong><br>
+        <a href="https://www.linkedin.com/in/hedieh-sazvar/" target="_blank">
+          linkedin.com/in/hedieh-sazvar
+        </a>
+      </p>
+
+    </div>
+
+  </aside>
+
+
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- TOP NAV -->
+    <div class="topbar">
+
+      <div class="topnav">
+        <a href="/" class="navlink active">Home</a>
+        <a href="/research.html" class="navlink">Research</a>
+        <a href="/cv.html" class="navlink">CV</a>
       </div>
-    </aside>
 
-    <main class="main">
-      <div class="topbar">
-        <div class="topnav">
-          <a href="/" class="navlink active">Home</a>
-          <a href="/research.html" class="navlink">Research</a>
-          <a href="/cv.html" class="navlink">CV</a>
-        </div>
-      </div>
+    </div>
 
-      <div class="content">
-        <h1>About me</h1>
 
-        <p>
-          I am a Ph.D. candidate in Operations Research in the Industrial Engineering and Management Sciences Department at Northwestern University, advised by Professor Seyed M.R. 
-          Iravani and Professor Sanjay Mehrotra. My research develops optimization and stochastic models for online matching platforms, 
-          motivated by healthcare staffing marketplaces such as nurse-to-shift assignment.
-        </p>
 
-        <p>
-          I study sequential job recommendation and assignment problems in which a platform recommends limited-capacity jobs (e.g., shifts) to agents (e.g., traveling nurses) who arrive over time, 
-          have heterogeneous preferences, and may not ultimately show up. These settings create a challenging revenue management problem: the platform must allocate scarce, 
-          perishable capacity and decide when to overbook, while accounting for uncertainty about future arrivals, acceptance, and no-shows, with the goal of maximizing filled jobs and expected revenue.
-        </p>
+    <!-- PAGE CONTENT -->
+    <div class="content">
 
-        <p>
-          My core contributions are structural and algorithmic. I analytically characterize optimal recommendation policies and prove their structural properties, then design scalable, 
-          structure-guided heuristic algorithms that translate these insights into implementable decision rules. In my current work, I extend this framework to dependent preferences and
-          capacity-constrained assortment optimization, and develop large-scale optimization methods—including mixed-integer reformulations and decomposition-based techniques—to obtain
-          scalable solutions in practice.
-        </p>
+      <h1>About me</h1>
 
-        <p>
-          I am also passionate about approximate dynamic programming and reinforcement learning, and have worked on rollout-augmented lookahead policies
-          for fork-join queueing systems using simulation-based evaluation.
-        </p>
+      <p>
+        I am a Ph.D. candidate in Operations Research in the Industrial Engineering and Management Sciences Department at Northwestern University, advised by Professor Seyed M.R. Iravani and Professor Sanjay Mehrotra. My research develops optimization and stochastic models for online matching platforms, motivated by healthcare staffing marketplaces such as nurse-to-shift assignment.
+      </p>
 
-        <h2>Recent Industry Experience (Moloco, Ads)</h2>
-        This summer, I was a Data Science Intern at Moloco on the Moloco Ads team. I evaluated Moloco Ads’ core throttling mechanism that selectively
-        filters bid requests from exchanges by designing a rigorous, campaign-level evaluation framework to quantify infrastructure–performance tradeoffs.
-        I analyzed millions of auction-level bid requests to identify system-level patterns, applied statistical methods to separate noise from signal, 
-        and delivered reproducible analysis and documentation. The work led to actionable recommendations that significantly reduced performance risk for high-impact, 
-        high-spend campaigns and improved the stability of throttling decisions.
-        <p>
-          
-        </p>
-      </div>
-    </main>
+      <p>
+        I study sequential job recommendation and assignment problems in which a platform recommends limited-capacity jobs (e.g., shifts) to agents (e.g., traveling nurses) who arrive over time, have heterogeneous preferences, and may not ultimately show up. These settings create a challenging revenue management problem: the platform must allocate scarce, perishable capacity and decide when to overbook, while accounting for uncertainty about future arrivals, acceptance, and no-shows, with the goal of maximizing filled jobs and expected revenue.
+      </p>
 
-  </div>
+      <p>
+        My core contributions are structural and algorithmic. I analytically characterize optimal recommendation policies and prove their structural properties, then design scalable, structure-guided heuristic algorithms that translate these insights into implementable decision rules. In my current work, I extend this framework to dependent preferences and capacity-constrained assortment optimization, and develop large-scale optimization methods—including mixed-integer reformulations and decomposition-based techniques—to obtain scalable solutions in practice.
+      </p>
+
+      <p>
+        I am also passionate about approximate dynamic programming and reinforcement learning, and have worked on rollout-augmented lookahead policies for fork-join queueing systems using simulation-based evaluation.
+      </p>
+
+
+
+      <!-- INDUSTRY EXPERIENCE -->
+      <h2>Recent Industry Experience (Moloco, Ads)</h2>
+
+      <p>
+        This summer, I was a Data Science Intern at Moloco on the Moloco Ads team. I evaluated Moloco Ads’ core throttling mechanism that selectively filters bid requests from exchanges by designing a rigorous campaign-level evaluation framework to quantify infrastructure–performance tradeoffs. I analyzed millions of auction-level bid requests to identify system-level performance patterns, applied statistical methods to separate noise from signal, and delivered reproducible analysis and documentation. The project resulted in actionable recommendations that significantly reduced performance risk for high-impact campaigns and improved the stability of throttling decisions.
+      </p>
+
+
+    </div>
+
+  </main>
+
+</div>
+
 </body>
 </html>
