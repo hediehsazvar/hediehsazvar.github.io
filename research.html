@@ -8,17 +8,26 @@
 
   <!-- Abstract styling -->
   <style>
+
     .abstract {
       font-size: 13px;
       color: #666;
-      line-height: 1.5;
-      margin-top: 6px;
+      line-height: 1.6;
+
+      margin-left: 22px;
+      padding-left: 14px;
+
+      border-left: 2px solid #ddd;
+
+      margin-top: 4px;
       margin-bottom: 18px;
     }
 
     .abstract strong {
       color: #444;
+      font-weight: 600;
     }
+
   </style>
 
 </head>
@@ -27,40 +36,68 @@
   <div class="page">
 
     <aside class="sidebar">
+
       <div class="brand">
-        <img class="brand-logo" src="assets/northwestern-logo.png" alt="Northwestern University"
+        <img class="brand-logo"
+             src="assets/northwestern-logo.png"
+             alt="Northwestern University"
              onerror="this.style.display='none'; document.getElementById('brandText').style.display='block';">
-        <div id="brandText" class="brand-text" style="display:none;">NORTHWESTERN</div>
+
+        <div id="brandText" class="brand-text" style="display:none;">
+          NORTHWESTERN
+        </div>
       </div>
 
       <img class="avatar" src="assets/headshot.JPG" alt="Hedieh Sazvar">
 
       <h2 class="side-name">Hedieh Sazvar</h2>
-      <div class="side-role">PhD Candidate</div>
+
+      <div class="side-role">
+        PhD Candidate
+      </div>
+
       <div class="side-affil">
         Operations Research (IEMS)<br/>
         Northwestern University
       </div>
 
       <div class="side-section-title">Contact</div>
+
       <div class="side-icons">
-        <a class="iconbtn" href="mailto:hedieh.sazvar@northwestern.edu">Email</a>
-        <a class="iconbtn" href="https://www.linkedin.com/in/hedieh-sazvar/" target="_blank">LinkedIn</a>
+
+        <a class="iconbtn"
+           href="mailto:hedieh.sazvar@northwestern.edu">
+          Email
+        </a>
+
+        <a class="iconbtn"
+           href="https://www.linkedin.com/in/hedieh-sazvar/"
+           target="_blank">
+          LinkedIn
+        </a>
+
       </div>
+
     </aside>
 
+
     <main class="main">
+
       <div class="topbar">
+
         <div class="topnav">
           <a href="/" class="navlink">Home</a>
           <a href="/research.html" class="navlink active">Research</a>
           <a href="/cv.html" class="navlink">CV</a>
         </div>
+
       </div>
+
 
       <div class="content">
 
         <h1>Research</h1>
+
 
         <h2>Sequential job recommendation under no-shows</h2>
 
@@ -75,59 +112,86 @@
         </p>
 
 
+
         <h2>Working papers</h2>
 
 
         <p>
           <strong>Optimal Sequential Job Recommendations with No-Shows</strong><br/>
-          <span class="meta">In preparation for submission to Manufacturing & Service Operations Management.</span>
+          <span class="meta">
+            In preparation for submission to Manufacturing & Service Operations Management.
+          </span>
         </p>
 
         <div class="abstract">
+
           <strong>Abstract.</strong>
-          We formulate the problem as an unconstrained 0–1 polynomial program. We characterize structural properties of optimal recommendation policies and develop exact and heuristic solution methods that significantly improve expected revenue compared to standard policies.
+          The increasing reliance on online platforms to match job opportunities with agents highlights the need for job recommendation policies.
+          We formulate the problem as a 0–1 polynomial program and characterize structural properties of optimal recommendation policies.
+          We develop scalable algorithms that significantly improve expected revenue compared with standard approaches.
+
         </div>
 
 
 
         <p>
           <strong>Overbooking in Sequential Job Recommendation Platforms with No-Shows</strong><br/>
-          <span class="meta">In preparation for submission.</span>
+          <span class="meta">
+            In preparation for submission.
+          </span>
         </p>
 
         <div class="abstract">
+
           <strong>Abstract.</strong>
-          We extend the sequential recommendation framework to allow overbooking under no-show risk. We reformulate the high-degree polynomial objective into tractable optimization models and develop scalable heuristic methods. Computational results show substantial revenue gains from overbooking.
+          We extend the sequential recommendation framework to incorporate overbooking under no-show risk.
+          We reformulate the resulting high-degree polynomial optimization problem and develop scalable algorithms.
+          Computational results demonstrate substantial revenue improvements compared to non-overbooking policies.
+
         </div>
 
 
 
         <p>
           <strong>Optimization Models and their Reformulations in Job Recommender System with Dependent Preferences and No-Shows.</strong><br/>
-          <span class="meta">Working paper.</span>
+          <span class="meta">
+            Working paper.
+          </span>
         </p>
 
         <div class="abstract">
+
           <strong>Abstract.</strong>
-          We study job recommendation under dependent preferences using discrete choice models and derive exact mixed-integer reformulations. We strengthen these formulations with valid inequalities and scalable optimization techniques, enabling solution of large-scale instances.
+          We study job recommendation under dependent preferences using discrete choice models and derive mixed-integer reformulations.
+          We strengthen these formulations using valid inequalities and scalable optimization techniques,
+          enabling efficient solution of large-scale instances.
+
         </div>
 
 
 
         <p>
           <strong>Rollout-Augmented Lookahead Policies for Dynamic Join Decisions in Fork-Join Queues</strong><br/>
-          <span class="meta">In preparation for submission. Links: <a href="#">PDF</a> · <a href="#">Code</a></span>
+          <span class="meta">
+            In preparation for submission.
+            Links: <a href="#">PDF</a> · <a href="#">Code</a>
+          </span>
         </p>
 
         <div class="abstract">
+
           <strong>Abstract.</strong>
-          We develop rollout-augmented lookahead policies for fork-join queueing systems that approximate optimal dynamic programming solutions while remaining computationally tractable. Results show meaningful cost reductions compared to baseline heuristics.
+          We develop rollout-augmented lookahead policies for fork-join queueing systems that approximate optimal dynamic programming performance while remaining computationally tractable.
+          Results demonstrate meaningful cost reductions compared to baseline heuristics.
+
         </div>
 
 
       </div>
+
     </main>
 
   </div>
+
 </body>
 </html>
