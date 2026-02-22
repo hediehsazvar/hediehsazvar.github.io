@@ -1,18 +1,14 @@
 :root{
-  --nu-purple:#4E2A84;
+  --primary:#1f4fa3;          /* academic blue */
+  --primary-dark:#163a78;
 
-  --bg:#f3f4f6;
+  --bg:#ffffff;
   --panel:#ffffff;
-  --text:#0b1220;
-  --muted:#64748b;
-  --border:#e2e8f0;
+  --text:#111827;
+  --muted:#4b5563;
+  --border:#e5e7eb;
 
-  --side:#0f172a;
-  --sideText:#e5e7eb;
-  --sideMuted:#cbd5e1;
-
-  --radius: 16px;
-  --shadow: 0 16px 40px rgba(2,6,23,0.18);
+  --radius: 10px;
   --content-max: 980px;
 }
 
@@ -20,102 +16,104 @@ html,body{margin:0;padding:0;width:100%;overflow-x:hidden;background:var(--bg);c
 *{box-sizing:border-box;max-width:100%;}
 
 body{
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  line-height:1.75;
+  font-family: "Georgia", "Times New Roman", Times, serif;   /* classic academic */
+  line-height:1.8;
 }
 
 .page{
   display:grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  min-height:100vh;
+  grid-template-columns: 310px minmax(0, 1fr);
+  min-height: 100vh;
 }
 
 .sidebar{
-  background: linear-gradient(180deg, #0b1022 0%, var(--side) 100%);
-  padding:24px 18px;
-  border-right: 1px solid rgba(255,255,255,0.08);
+  background: #fafafa;
+  border-right: 1px solid var(--border);
+  padding: 20px 18px;
 }
+
+.main{min-width:0;}
 
 .brand{
   display:flex;
+  justify-content:flex-start;
   align-items:center;
-  justify-content:center;
-  margin-bottom: 16px;
+  gap:10px;
+  margin-bottom: 10px;
 }
 
 .brand-logo{
-  height:62px;
+  height:60px;
   width:auto;
   display:block;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.35));
 }
 
 .avatar{
   width:100%;
-  max-width: 260px;
+  max-width: 250px;
   height:auto;
   max-height: 360px;
-  object-fit: cover;     /* fills nicely; may crop slightly */
-  border-radius: 18px;
-  border: 6px solid rgba(255,255,255,0.14);  /* bold frame */
-  box-shadow: var(--shadow);
+  object-fit: cover;
+  border-radius: 8px;                 /* classic rectangle */
+  border: 2px solid #d1d5db;          /* thin frame */
+  padding: 6px;                       /* “mat” look */
+  background:#fff;
   display:block;
-  margin: 12px auto 14px;
-  background:#111827;
+  margin: 12px auto 12px;
 }
 
 .side-name{
   text-align:center;
-  font-weight:900;
-  font-size:22px;
-  margin: 8px 0 4px;
-  color: var(--sideText);
+  font-weight: 700;
+  font-size: 21px;
+  margin: 10px 0 4px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
 .side-role,.side-affil{
   text-align:center;
+  color: var(--muted);
   font-size: 13.5px;
-  color: var(--sideMuted);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
 .side-section-title{
   margin-top: 22px;
   padding-top: 16px;
-  border-top: 1px solid rgba(255,255,255,0.10);
+  border-top: 1px solid var(--border);
   text-align:center;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  font-weight: 900;
   font-size: 12px;
-  color: rgba(255,255,255,0.85);
+  color: var(--primary-dark);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
 .side-icons{
   display:flex;
   justify-content:center;
-  gap: 12px;
+  gap: 10px;
   margin-top: 12px;
 }
 
 .iconbtn{
-  width:46px;height:46px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.10);
+  width:44px;height:44px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
   display:flex;
   align-items:center;
   justify-content:center;
   text-decoration:none;
 }
 
-.iconbtn:hover{background: rgba(255,255,255,0.10);}
-.iconbtn svg{width:20px;height:20px;fill:#fff;}
+.iconbtn:hover{background:#f3f4f6;}
+.iconbtn svg{width:20px;height:20px;fill:var(--primary);}
 
-.main{min-width:0;}
-
+/* Flat classic header bar */
 .topbar{
-  background: #ffffff;
-  border-bottom: 1px solid var(--border);
+  background: var(--primary);
   position: sticky;
   top:0;
   z-index:20;
@@ -125,30 +123,25 @@ body{
   max-width: var(--content-max);
   margin: 0 auto;
   display:flex;
-  justify-content:flex-start;
-  gap: 18px;
-  padding: 14px 22px;
+  justify-content:flex-end;
+  align-items:center;
+  gap: 24px;
+  padding: 12px 22px;
   flex-wrap:wrap;
 }
 
 .topnav a{
-  color: #0b1220 !important;
+  color:#fff !important;
   text-decoration:none !important;
-  font-weight: 900;
-  font-size: 13.5px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid transparent;
+  font-weight: 800;
+  font-size: 14px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  padding: 8px 6px;
+  border-bottom: 3px solid transparent;
 }
 
-.topnav a:hover{background:#f8fafc;border-color:var(--border);}
-.topnav a.active{
-  background: rgba(78,42,132,0.10);
-  border-color: rgba(78,42,132,0.22);
-  color: var(--nu-purple) !important;
-}
+.topnav a:hover{border-bottom-color: rgba(255,255,255,0.75);}
+.topnav a.active{border-bottom-color:#fff;}
 
 .content{
   max-width: var(--content-max);
@@ -157,34 +150,31 @@ body{
 }
 
 h1{
-  font-size: 40px;
-  letter-spacing:-0.02em;
-  margin: 16px 0 18px;
-  color: #0b1220;
+  font-size: 46px;
+  color: var(--primary-dark);
+  margin: 16px 0 14px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  letter-spacing: -0.02em;
 }
 
 h2{
-  font-size: 16px;
-  margin: 0 0 10px;
-  color: #0b1220;
+  font-size: 18px;
+  color: var(--primary-dark);
+  margin: 24px 0 8px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
-p,li{font-size: 15.4px;color:#0b1220;}
-a{color: var(--nu-purple);}
+p,li{font-size: 16px;}
+a{color: var(--primary-dark);}
 
-.meta{color: var(--muted); font-size: 13.5px;}
-
-.section{
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 18px 18px;
-  margin: 14px 0;
-  box-shadow: 0 8px 24px rgba(2,6,23,0.06);
+.meta{
+  color: var(--muted);
+  font-size: 13.5px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
 }
 
 @media (max-width: 900px){
   .page{grid-template-columns: 1fr;}
-  .sidebar{border-right:none;border-bottom:1px solid rgba(255,255,255,0.08);}
+  .sidebar{border-right:none;border-bottom:1px solid var(--border);}
   .topnav{justify-content:center;}
 }
