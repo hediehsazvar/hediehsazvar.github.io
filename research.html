@@ -1,91 +1,243 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Hedieh Sazvar | Research</title>
   <link rel="stylesheet" href="assets/style.css"/>
+
+  <style>
+
+    /* Paper block */
+    .paper{
+      margin-bottom: 28px;
+    }
+
+    .paper-title{
+      font-weight: 600;
+      font-size: 18px;
+      color: #4E2A84;
+      margin-bottom: 4px;
+    }
+
+    .paper-meta{
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 6px;
+    }
+
+    /* Smaller abstract font */
+    .abstract{
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
+      margin-top: 4px;
+    }
+
+  </style>
+
 </head>
 
+
 <body>
-  <div class="page">
 
-    <aside class="sidebar">
-      <div class="brand">
-        <img class="brand-logo" src="assets/northwestern-logo.png" alt="Northwestern University"
-             onerror="this.style.display='none'; document.getElementById('brandText').style.display='block';">
-        <div id="brandText" class="brand-text" style="display:none;">NORTHWESTERN</div>
-      </div>
+<div class="page">
 
-      <img class="avatar" src="assets/headshot.JPG" alt="Hedieh Sazvar">
 
-      <h2 class="side-name">Hedieh Sazvar</h2>
-      <div class="side-role">PhD Candidate</div>
-      <div class="side-affil">
-        Operations Research (IEMS)<br/>
-        Northwestern University
-      </div>
+  <!-- Sidebar -->
+  <aside class="sidebar">
 
-      <div class="side-section-title">Contact</div>
-      <div class="side-icons">
-        <a class="iconbtn" href="mailto:hedieh.sazvar@northwestern.edu" aria-label="Email">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"/></svg>
+    <div class="brand">
+      <img class="brand-logo"
+           src="assets/northwestern-logo.png"
+           alt="Northwestern University">
+    </div>
+
+    <img class="avatar" src="assets/IMG_5699.jpeg" alt="Hedieh Sazvar">
+
+    <h2 class="side-name">Hedieh Sazvar</h2>
+
+    <div class="side-role">
+      PhD Candidate
+    </div>
+
+    <div class="side-affil">
+      Operations Research (IEMS)<br>
+      Northwestern University
+    </div>
+
+
+    <div class="side-section-title">
+      Contact
+    </div>
+
+    <div class="side-icons">
+
+      <a class="iconbtn"
+         href="mailto:hedieh.sazvar@northwestern.edu">
+        Email
+      </a>
+
+      <a class="iconbtn"
+         href="https://www.linkedin.com/in/hedieh-sazvar/"
+         target="_blank">
+        LinkedIn
+      </a>
+
+    </div>
+
+  </aside>
+
+
+
+  <!-- Main content -->
+  <main class="main">
+
+
+    <!-- Top navigation -->
+    <div class="topbar">
+
+      <div class="topnav">
+
+        <a href="index.html" class="navlink">
+          Home
         </a>
-        <a class="iconbtn" href="https://www.linkedin.com/in/hedieh-sazvar/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5ZM0.5 8.5H4.5V23H0.5V8.5ZM8.5 8.5H12.3V10.5H12.36C12.89 9.5 14.2 8.45 16.1 8.45C20.1 8.45 20.85 11.05 20.85 14.45V23H16.85V15.25C16.85 13.4 16.82 11.05 14.35 11.05C11.85 11.05 11.5 13 11.5 15.12V23H7.5V8.5H8.5Z"/></svg>
-        </a>
-      </div>
-    </aside>
 
-    <main class="main">
-      <div class="topbar">
-        <div class="topnav">
-          <a href="/" class="navlink">Home</a>
-          <a href="/research.html" class="navlink active">Research</a>
-          <a href="/cv.html" class="navlink">CV</a>
+        <a href="research.html" class="navlink active">
+          Research
+        </a>
+
+        <a href="cv.html" class="navlink">
+          CV
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- Content -->
+    <div class="content">
+
+
+      <h1>Research</h1>
+
+
+      <h2>Sequential job recommendation under no-shows</h2>
+
+      <p>
+        I study online matching platforms where agents arrive sequentially and the platform recommends limited-capacity jobs under
+        uncertain commitment (no-shows). My work characterizes the structure of optimal recommendation and overbooking policies and
+        develops scalable optimization methods to maximize filled jobs and expected revenue.
+      </p>
+
+      <p class="meta">
+        Keywords: sequential decision-making · revenue management · no-shows · overbooking · large-scale optimization
+      </p>
+
+
+
+      <h2>Working papers</h2>
+
+
+      <!-- Paper 1 -->
+      <div class="paper">
+
+        <div class="paper-title">
+          Optimal Sequential Job Recommendations with No-Shows
         </div>
+
+        <div class="paper-meta">
+          In preparation for submission to Manufacturing & Service Operations Management
+        </div>
+
+        <div class="abstract">
+          <strong>Abstract.</strong>
+          We study sequential job recommendation where agents arrive over time and may accept recommended jobs but later fail to show up.
+          The platform must allocate limited capacity under uncertainty to maximize filled jobs and expected revenue. We analytically
+          characterize optimal recommendation policies and develop scalable algorithms based on these structural insights.
+        </div>
+
       </div>
 
-      <div class="content">
-        <h1>Research</h1>
 
-        <h2>Sequential job recommendation under no-shows</h2>
-        <p>
-          I study online matching platforms where agents arrive sequentially and the platform recommends limited-capacity jobs.
-          Agents may accept and later no-show; cancellations can create unsellable capacity. My work develops optimal policy structure
-          and scalable optimization methods to maximize filled jobs and expected revenue.
-        </p>
-        <p class="meta">
-          Keywords: sequential decision-making · stochastic optimization · overbooking · MIP formulations · heuristics
-        </p>
 
-        <h2>Working papers</h2>
+      <!-- Paper 2 -->
+      <div class="paper">
 
-        <p><strong>Optimal Sequential Job Recommendations with No-Shows</strong><br/>
-          <span class="meta">Working paper (2026). Links: <a href="#">PDF</a> · <a href="#">Code</a></span>
-        </p>
+        <div class="paper-title">
+          Overbooking in Sequential Job Recommendation Platforms with No-Shows
+        </div>
 
-        <p><strong>Overbooking in Sequential Job Recommendation Platforms with No-Shows</strong><br/>
-          <span class="meta">Working paper (2026). Links: <a href="#">PDF</a></span>
-        </p>
+        <div class="paper-meta">
+          In preparation for submission
+        </div>
 
-        <p><strong>Dependent Preferences in Online Matching and Recommendation</strong><br/>
-          <span class="meta">Working paper (2026). Links: <a href="#">PDF</a></span>
-        </p>
+        <div class="abstract">
+          <strong>Abstract.</strong>
+          We study overbooking in sequential job recommendation platforms with no-show risk. We characterize optimal overbooking policies
+          and develop scalable optimization methods to improve fill rates and expected revenue under capacity uncertainty.
+        </div>
 
-        <p><strong>Rollout-Augmented Lookahead Policies for Dynamic Join Decisions in Fork-Join Queues</strong><br/>
-          <span class="meta">Working paper (2025/2026). Links: <a href="#">PDF</a> · <a href="#">Code</a></span>
-        </p>
-
-        <h2>Selected methods</h2>
-        <ul>
-          <li>Mixed-integer programming (linear/quadratic/polynomial), reformulations, and solver engineering</li>
-          <li>Decomposition and cut generation for scalable solution methods</li>
-          <li>Simulation-based evaluation and rollout/lookahead baselines</li>
-        </ul>
       </div>
-    </main>
 
-  </div>
+
+
+      <!-- Paper 3 -->
+      <div class="paper">
+
+        <div class="paper-title">
+          Optimization Models and Reformulations for Job Recommendation with Dependent Preferences and No-Shows
+        </div>
+
+        <div class="paper-meta">
+          Working paper
+        </div>
+
+        <div class="abstract">
+          <strong>Abstract.</strong>
+          We develop mixed-integer reformulations for high-dimensional 0–1 polynomial optimization problems arising in job recommendation
+          systems with dependent preferences and no-show risk. We introduce scalable formulations and solver-oriented techniques to
+          enable large-scale implementation.
+        </div>
+
+      </div>
+
+
+
+      <!-- Paper 4 -->
+      <div class="paper">
+
+        <div class="paper-title">
+          Rollout-Augmented Lookahead Policies for Dynamic Join Decisions in Fork-Join Queues
+        </div>
+
+        <div class="paper-meta">
+          In preparation for submission
+          · <a href="#">PDF</a>
+          · <a href="#">Code</a>
+        </div>
+
+        <div class="abstract">
+          <strong>Abstract.</strong>
+          We develop rollout-augmented lookahead policies for fork-join queueing systems. These policies approximate optimal dynamic
+          programming solutions while remaining computationally scalable and implementable.
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+
+  </main>
+
+
+</div>
+
+
 </body>
 </html>
