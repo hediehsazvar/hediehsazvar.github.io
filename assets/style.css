@@ -1,148 +1,122 @@
-/* ===== Style A: Clean academic ===== */
 :root{
-  --page-max: 860px;         /* narrower = tidier */
-  --radius: 12px;
-}
-/* Kill horizontal scroll globally */
-html, body{
-  margin:0;
-  padding:0;
-  width:100%;
-  overflow-x:hidden;
+  --nu-purple:#4E2A84;
+  --nu-purple-dark:#3b1f66;
+
+  --bg:#fbfbfd;
+  --panel:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --shadow: 0 8px 24px rgba(17,24,39,0.08);
+
+  --radius: 14px;
+  --content-max: 880px;
 }
 
-*{
-  box-sizing:border-box;
-  max-width:100%;
-}
+html,body{margin:0;padding:0;width:100%;overflow-x:hidden;background:var(--bg);color:var(--text);}
+*{box-sizing:border-box;max-width:100%;}
 
 body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  line-height:1.85;
 }
 
-/* ---------- Layout ---------- */
 .page{
   display:grid;
-  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-columns: 300px minmax(0, 1fr);
   min-height:100vh;
 }
 
 .sidebar{
-  background: var(--sidebar);
-  border-right: 1px solid var(--border);
-  padding: 22px 18px;
+  background:var(--panel);
+  border-right:1px solid var(--border);
+  padding:22px 18px;
 }
 
-.main{
-  min-width:0; /* prevents overflow */
-}
+.main{min-width:0;}
 
-/* ---------- Brand (logo) ---------- */
 .brand{
   display:flex;
   align-items:center;
-  justify-content:flex-start;
-  gap:10px;
-  margin-bottom: 14px;
+  gap:12px;
+  margin-bottom:16px;
 }
 
 .brand-logo{
-  height: 64px;   /* make logo bigger here */
-  width: auto;
+  height:64px;
+  width:auto;
   display:block;
 }
 
-.brand-text{
-  font-weight:800;
-  letter-spacing:0.18em;
-  color: var(--nu-purple);
-  font-size: 14px;
-}
-
-/* ---------- Sidebar profile ---------- */
 .avatar{
-  width: 100%;
-  max-width: 240px;
-  height: auto;
-  max-height: 360px;
-  border-radius: 14px;
-  object-fit: contain; /* show full picture */
+  width:100%;
+  max-width:260px;
+  height:auto;
+  max-height:360px;
+  object-fit:contain;      /* show full image */
+  border-radius:16px;
+  border:1px solid var(--border);
+  box-shadow: var(--shadow);
   display:block;
-  margin: 14px auto 12px;
-  border: 1px solid var(--border);
-  box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+  margin:14px auto 12px;
   background:#fff;
 }
 
 .side-name{
-  margin: 10px 0 6px;
   text-align:center;
-  font-size: 22px;
-  font-weight: 800;
+  font-weight:800;
+  font-size:22px;
+  margin:10px 0 4px;
 }
 
-.side-role, .side-affil{
+.side-role,.side-affil{
   text-align:center;
-  color: var(--muted);
-  font-size: 13.5px;
+  color:var(--muted);
+  font-size:13.5px;
 }
 
-.side-affil{
-  margin-top: 4px;
-}
+.side-affil{margin-top:6px;}
 
-/* ---------- Sidebar contact ---------- */
 .side-section-title{
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
+  margin-top:22px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
   text-align:center;
-  color: var(--nu-purple-dark);
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 13px;
+  font-size:12px;
+  letter-spacing:0.12em;
+  font-weight:800;
+  text-transform:uppercase;
+  color:var(--nu-purple-dark);
 }
 
 .side-icons{
   display:flex;
   justify-content:center;
-  gap: 12px;
-  margin-top: 12px;
+  gap:12px;
+  margin-top:12px;
 }
 
 .iconbtn{
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
+  width:44px;height:44px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  background: #fff;
   text-decoration:none;
-  flex: 0 0 auto;
+  box-shadow: 0 2px 10px rgba(17,24,39,0.05);
 }
 
-.iconbtn:hover{
-  background:#f7f7fb;
-}
+.iconbtn:hover{transform: translateY(-1px); box-shadow: 0 10px 18px rgba(17,24,39,0.10);}
+.iconbtn svg{width:20px;height:20px;fill:var(--nu-purple);}
 
-.iconbtn svg{
-  width:20px;
-  height:20px;
-  fill: var(--nu-purple);
-}
-
-/* ---------- Top bar ---------- */
 .topbar{
-  background: var(--nu-purple);
-  padding: 0 12px;
-  position: relative;
-  z-index: 10;
+  background:var(--nu-purple);
+  position:sticky;
+  top:0;
+  z-index:20;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
 }
 
 .topnav{
@@ -151,112 +125,66 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap: 26px;
-  flex-wrap: wrap;
-  padding: 10px 12px;
-  min-height: 54px;
+  gap:22px;
+  padding:14px 16px;
+  flex-wrap:wrap;
 }
 
-/* Force nav links to be visible */
-.topnav .navlink{
+.topnav a{
   color:#fff !important;
-  font-weight:700;
-  font-size: 15px;
   text-decoration:none !important;
-  padding: 8px 12px;
-  border-bottom: 3px solid transparent;
-  white-space: nowrap;
-  line-height: 1;
+  font-weight:800;
+  font-size:14px;
+  letter-spacing:0.02em;
+  padding:8px 10px;
+  border-radius:999px;
+  background: transparent;
+  border:1px solid transparent;
 }
 
-.topnav .navlink:hover{
-  border-bottom-color: rgba(255,255,255,0.75);
+.topnav a:hover{
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.18);
 }
 
-.topnav .navlink.active{
-  border-bottom-color: #fff;
+.topnav a.active{
+  background:#fff;
+  color: var(--nu-purple) !important;
 }
 
-/* ---------- Content ---------- */
-/* ===== Style A: Clean academic ===== */
 .content{
-  max-width: var(--page-max);
+  max-width: var(--content-max);
   margin: 0 auto;
   padding: 34px 26px 70px;
 }
 
 h1{
-  font-size: 44px;
-  letter-spacing: -0.02em;
+  font-size:44px;
   margin: 18px 0 18px;
+  letter-spacing:-0.02em;
+  color: var(--nu-purple);
+  line-height:1.12;
 }
 
 h2{
-  font-size: 18px;
-  margin: 26px 0 10px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border);
+  font-size:18px;
+  margin:28px 0 10px;
+  padding-top:18px;
+  border-top:1px solid var(--border);
+  color: var(--nu-purple-dark);
 }
 
-p, li{
-  font-size: 15.5px;
-  line-height: 1.85;
+p,li{font-size:15.6px;}
+a{color: var(--nu-purple);}
+
+.meta{
+  color: var(--muted);
+  font-size: 13.5px;
 }
 
-.sidebar{
-  padding: 22px 18px;
-}
-
-.topbar{
-  position: sticky;
-  top: 0;
-}
-
-.topnav{
-  max-width: var(--page-max);
-}
-
-/* ---------- Mobile ---------- */
 @media (max-width: 900px){
-  .page{ grid-template-columns: 1fr; }
-  .sidebar{
-    border-right:none;
-    border-bottom: 1px solid var(--border);
-  }
-  .brand{ justify-content:center; }
-}
-
-/* --- NAV FIX: style all links in the top nav (even without classes) --- */
-/* ===== Universal top menu (applies to all pages) ===== */
-.topbar{ background: var(--nu-purple); padding: 0 12px; position: relative; z-index: 10; }
-
-.topnav{
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 26px;
-  flex-wrap: wrap;
-  padding: 10px 12px;
-  min-height: 54px;
-}
-
-.topnav a{
-  color: #fff !important;
-  font-weight: 700;
-  font-size: 15px;
-  text-decoration: none !important;
-  padding: 8px 12px;
-  border-bottom: 3px solid transparent;
-  white-space: nowrap;
-  line-height: 1;
-}
-
-.topnav a:hover{ border-bottom-color: rgba(255,255,255,0.75); }
-.topnav a.active{ border-bottom-color: #fff; }
-
-/* highlight current page if you add class="active" on that link */
-.topnav a.active{
-  border-bottom-color: #fff;
+  .page{grid-template-columns: 1fr;}
+  .sidebar{border-right:none;border-bottom:1px solid var(--border);}
+  .brand{justify-content:center;}
+  .content{padding: 26px 18px 60px;}
 }
