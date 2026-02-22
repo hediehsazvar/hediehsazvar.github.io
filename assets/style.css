@@ -1,14 +1,8 @@
+/* ===== Style A: Clean academic ===== */
 :root{
-  --nu-purple:#4E2A84;
-  --nu-purple-dark:#3b1f66;
-
-  --text:#111827;
-  --muted:#4b5563;
-  --border:#e5e7eb;
-  --bg:#ffffff;
-  --sidebar:#ffffff;
+  --page-max: 860px;         /* narrower = tidier */
+  --radius: 12px;
 }
-
 /* Kill horizontal scroll globally */
 html, body{
   margin:0;
@@ -185,11 +179,6 @@ body{
 
 /* ---------- Content ---------- */
 /* ===== Style A: Clean academic ===== */
-:root{
-  --page-max: 860px;         /* narrower = tidier */
-  --radius: 12px;
-}
-
 .content{
   max-width: var(--page-max);
   margin: 0 auto;
