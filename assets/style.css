@@ -2,8 +2,8 @@
    Minimalist White Theme (NU Purple)
    - White background
    - Purple menu text spread across
-   - Logo never stretches; can be wider
-   - Portrait is true oval (ellipse), not flat-sided
+   - Portrait is oval with NO frame
+   - Contact icons are plain (no circles)
    ========================================================= */
 
 :root{
@@ -50,7 +50,7 @@ body{
 
 .main{ min-width:0; background: var(--bg); }
 
-/* ---------- Northwestern logo (bigger + no distortion) ---------- */
+/* ---------- Northwestern logo (big, no distortion) ---------- */
 .brand{
   display:flex;
   align-items:center;
@@ -58,32 +58,29 @@ body{
   margin-bottom: 14px;
 }
 
-/* Do NOT force width; allow it to be wide. */
 .brand-logo{
-  height: 84px;         /* scale by height */
-  width: auto;          /* prevents stretching */
-  max-width: 260px;     /* lets it be wide, but not overflow sidebar */
-  object-fit: contain;  /* extra safety */
+  height: 84px;
+  width: auto;
+  max-width: 260px;
+  object-fit: contain;
   display:block;
 }
 
-/* ---------- Portrait (true oval / ellipse) ---------- */
-/* Less flat sides = ellipse with border-radius:999px */
+/* ---------- Portrait (true oval, NO frame) ---------- */
 .avatar{
   width: 240px;
-  height: 320px;        /* taller portrait oval */
+  height: 320px;
   display:block;
   margin: 16px auto 14px;
 
   object-fit: cover;
-  border-radius: 999px; /* TRUE OVAL */
+  border-radius: 999px;
 
-  border: 2px solid rgba(78,42,132,0.35);
-  outline: 10px solid rgba(78,42,132,0.07);
-  background:#fff;
-
-  /* minimal shadow */
-  box-shadow: 0 10px 24px rgba(17,24,39,0.10);
+  /* remove frame */
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
 }
 
 /* ---------- Sidebar text ---------- */
@@ -116,32 +113,36 @@ body{
   color: var(--nu-purple);
 }
 
-/* ---------- Contact icons ---------- */
+/* ---------- Contact icons (plain, no circles) ---------- */
 .side-icons{
   display:flex;
   justify-content:center;
-  gap: 12px;
+  gap: 14px;
   margin-top: 12px;
 }
 
+/* remove button styling */
 .iconbtn{
-  width:44px;
-  height:44px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background:#fff;
-  display:flex;
+  width:auto;
+  height:auto;
+  border:none;
+  background:transparent;
+  border-radius:0;
+  padding: 0;
+  display:inline-flex;
   align-items:center;
   justify-content:center;
   text-decoration:none;
 }
 
-.iconbtn:hover{ border-color: rgba(78,42,132,0.35); }
-
 .iconbtn svg{
-  width:20px;
-  height:20px;
+  width:22px;
+  height:22px;
   fill: var(--nu-purple);
+}
+
+.iconbtn:hover svg{
+  fill: var(--nu-purple-dark);
 }
 
 /* ---------- Top nav: white background, purple text, spread across ---------- */
@@ -159,7 +160,7 @@ body{
   padding: 14px 22px;
 
   display:flex;
-  justify-content: space-between; /* spread */
+  justify-content: space-between;
   align-items:center;
   gap: 16px;
   flex-wrap: wrap;
