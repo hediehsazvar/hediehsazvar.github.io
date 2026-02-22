@@ -126,9 +126,24 @@
         <div class="abstract">
 
           <strong>Abstract.</strong>
-          The increasing reliance on online platforms to match job opportunities with agents highlights the need for job recommendation policies.
-          We formulate the problem as a 0–1 polynomial program and characterize structural properties of optimal recommendation policies.
-          We develop scalable algorithms that significantly improve expected revenue compared with standard approaches.
+          Problem definition: The increasing reliance on online platforms to match job opportunities with agents highlights the need
+          for job recommendation policies. Our model accounts for heterogeneous preferences and commitment probabilities for each agent-job
+          pair, as well as varying numbers of agents required across jobs. Agents arrive sequentially and sign up for preferred jobs from the set
+          recommended to them. The objective is to maximize the revenue earned when agents complete their jobs.
+          Methodology: We formulate the problem as an unconstrained 0-1 polynomial program. with a full-degree objective function. We
+          decompose the polynomial objective function into smaller components and develop an efficient recursive method to evaluate it. Leveraging 
+          this decomposition, we characterize structural properties of optimal recommendation policies and develop exact and heuristic
+          solution methods.
+          Results: For jobs requiring a single agent, we characterize an optimal threshold policy and develop a backward-induction algorithm that
+          yields a strongly polynomial-time exact solution. For jobs requiring multiple agents, we establish a nested optimal-solution structure
+          and develop an efficient stepwise heuristic. We also study a setting in which agents may sign up for jobs, but after observing signups, the
+          platform decides which agents receive offers and in what order; we analytically derive the optimal offering sequence and the offering
+          policy. Computationally, our heuristics achieve near-optimal expected revenue while standard heuristics incur substantial optimality
+          gaps or become infeasible as problem size increases. Relative to the show-to-all policy used in current practice, our methods deliver
+          significant revenue improvements. We further quantify the value of arrival-sequence predictability and find that predicting only the last
+          few arrivals captures a large fraction of the full-predictability value.
+          Managerial implications: This framework applies broadly to job-agent matching platforms, including nurse-shift, freelance, and volunteer matching platforms, 
+          and enables personalized and selective recommendations that improve expected revenue under no-shows.
 
         </div>
 
@@ -144,9 +159,14 @@
         <div class="abstract">
 
           <strong>Abstract.</strong>
-          We extend the sequential recommendation framework to incorporate overbooking under no-show risk.
-          We reformulate the resulting high-degree polynomial optimization problem and develop scalable algorithms.
-          Computational results demonstrate substantial revenue improvements compared to non-overbooking policies.
+          The increasing reliance on online platforms to match job opportunities with agents across various industries 
+            highlights the need for efficient job recommendation policies. This paper extends our prior work on sequential job recommendation 
+            with different preferences and commitment probabilities for each agent-job pair, as well as the varying numbers of agents required for different jobs. 
+            The model allows more agents to sign up for each job than are required, thereby mitigating the risk of absenteeism. The objective is to maximize 
+            the platform’s expected revenue, which is earned when agents complete their jobs. The resulting optimization problem is a high-degree binary polynomial program.
+            We reformulate the objective so that it can be evaluated in polynomial time and embed this evaluation in a mixed-integer program that provides exact solutions for moderate-sized instances.
+            For larger instances, we develop a heuristic algorithm that exploits structural properties of the optimal solution to generate near-optimal policies efficiently. 
+            Computational experiments demonstrate that overbooking can substantially improve expected revenue compared with non-overbooking policies.
 
         </div>
 
@@ -162,9 +182,20 @@
         <div class="abstract">
 
           <strong>Abstract.</strong>
-          We study job recommendation under dependent preferences using discrete choice models and derive mixed-integer reformulations.
-          We strengthen these formulations using valid inequalities and scalable optimization techniques,
-          enabling efficient solution of large-scale instances.
+          Online job-matching platforms, from nurse–shift staffing to freelance and volunteer services, face a revenue-management
+          problem in which the platform recommends jobs to sequentially arriving agents. Jobs can require multiple agents, agents are
+          heterogeneous in both preferences and commitment, and no-shows reduce the number of completed jobs. Overbooking, i.e.,
+          allowing more agents to sign up than are ultimately required, mitigates no-shows but induces dependence across recommendation
+          decisions and significantly increases computational complexity. Our prior work addressed this setting under
+          independent preferences by characterizing optimal recommendation policies and developing exact and heuristic solution methods
+          for deterministic and stochastic arrival sequences.
+          We extend this framework to dependent preferences by modeling an agent’s sign-up decision as a function of the entire recommended
+          set through discrete choice models. We consider three choice models—the multinomial logit model, the Markov chain choice
+          model, and the exponomial model—and, for each, derive an exact mixed-integer programming reformulation of the recommendation
+          problem with heterogeneous agents, varying numbers of agents required across jobs, no-shows, and overbooking. We strengthen these
+          formulations using constructive heuristics and valid inequalities that exploit problem structure. A computational study quantifies the
+          impact of dependent preferences relative to independence-based benchmarks and demonstrates that the strengthened formulations
+          remain tractable for real-world instance sizes.
 
         </div>
 
@@ -181,9 +212,19 @@
         <div class="abstract">
 
           <strong>Abstract.</strong>
-          We develop rollout-augmented lookahead policies for fork-join queueing systems that approximate optimal dynamic programming performance while remaining computationally tractable.
-          Results demonstrate meaningful cost reductions compared to baseline heuristics.
-
+          Fork-join queues arise frequently in parallel service systems where each job is
+          evaluated by multiple servers, and the join decision must often be made before all
+          evaluations are complete. The key challenge is to determine when to stop collecting
+          additional information and make a final prediction, which balances service delay
+          against misclassification risk. We build on the threshold-based heuristic proposed
+          by Singla and Iravani (2024), and introduce a policy that augments this baseline
+          with a k-step lookahead and an H-step simulation-based rollout to better approximate
+          the cost-to-go. We compare this policy against the original heuristic and a
+          tabular Q-learning benchmark. Across a range of system parameters, we find that
+          even shallow lookahead and short rollout lengths lead to meaningful reductions
+          in long-run average cost. These results demonstrate the effectiveness of simple
+          approximate dynamic programming techniques in continuous-time decision models
+          with partial observations.
         </div>
 
 
