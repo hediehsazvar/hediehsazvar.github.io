@@ -1,6 +1,8 @@
 /* =========================================================
-   Minimalist (Pure White) + Oval Portrait + NU Purple
-   Works with: .page .sidebar .main .topbar .topnav .avatar ...
+   Minimalist Pure-White + Purple Typography Nav (no purple bg)
+   - Menu items spread across
+   - Bigger Northwestern logo
+   - Portrait: more curved ellipse + light frame
    ========================================================= */
 
 :root{
@@ -8,13 +10,11 @@
   --nu-purple-dark:#3b1f66;
 
   --bg:#ffffff;
-  --panel:#ffffff;
-
   --text:#111827;
   --muted:#6b7280;
   --border:#e5e7eb;
 
-  --content-max: 900px;
+  --content-max: 980px;
 }
 
 html, body{
@@ -26,10 +26,7 @@ html, body{
   color: var(--text);
 }
 
-*{
-  box-sizing:border-box;
-  max-width:100%;
-}
+*{ box-sizing:border-box; max-width:100%; }
 
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
@@ -39,23 +36,20 @@ body{
 /* ---------- Layout ---------- */
 .page{
   display:grid;
-  grid-template-columns: 300px minmax(0, 1fr);
-  min-height: 100vh;
-  background: var(--bg);
+  grid-template-columns: 310px minmax(0, 1fr);
+  min-height:100vh;
+  background:#fff;
 }
 
 .sidebar{
-  background: var(--panel);
+  background:#fff;
   border-right: 1px solid var(--border);
   padding: 22px 18px;
 }
 
-.main{
-  min-width:0;
-  background: var(--bg);
-}
+.main{ min-width:0; background:#fff; }
 
-/* ---------- Northwestern logo ---------- */
+/* ---------- Northwestern logo bigger ---------- */
 .brand{
   display:flex;
   align-items:center;
@@ -65,29 +59,31 @@ body{
 }
 
 .brand-logo{
-  height: 64px;        /* make it clearly visible */
+  height: 82px;       /* bigger */
   width:auto;
   display:block;
 }
 
-/* ---------- Oval portrait (clean frame) ---------- */
+/* ---------- Portrait: MORE curved ellipse ---------- */
+/* “Not curved enough” usually means height/width too similar.
+   We exaggerate ellipse by making it taller and fully rounded. */
 .avatar{
-  width: 230px;
-  height: 290px;        /* ellipse shape */
+  width: 220px;
+  height: 320px;          /* taller => stronger ellipse curvature */
   display:block;
-  margin: 16px auto 14px;
+  margin: 14px auto 14px;
 
   object-fit: cover;
-  border-radius: 999px;
+  border-radius: 9999px;  /* maximum curvature */
 
-  /* minimalist oval frame */
-  border: 2px solid rgba(78,42,132,0.40);
-  outline: 10px solid rgba(78,42,132,0.08);
-
+  border: 1px solid rgba(78,42,132,0.28);
   background:#fff;
+
+  /* Reserve paint + avoid heavy effects (faster) */
+  box-shadow: none;
 }
 
-/* ---------- Sidebar text ---------- */
+/* Sidebar text */
 .side-name{
   text-align:center;
   font-weight: 900;
@@ -118,7 +114,7 @@ body{
   color: var(--nu-purple);
 }
 
-/* ---------- Contact icons (minimal) ---------- */
+/* Contact icons (minimal) */
 .side-icons{
   display:flex;
   justify-content:center;
@@ -139,9 +135,7 @@ body{
   text-decoration:none;
 }
 
-.iconbtn:hover{
-  border-color: rgba(78,42,132,0.35);
-}
+.iconbtn:hover{ border-color: rgba(78,42,132,0.35); }
 
 .iconbtn svg{
   width:20px;
@@ -149,52 +143,59 @@ body{
   fill: var(--nu-purple);
 }
 
-/* ---------- Top nav (NU purple bar, minimalist) ---------- */
+/* ---------- Top nav: NO purple background, purple text, spread across ---------- */
 .topbar{
-  background: var(--nu-purple);
+  background:#fff;                       /* pure white */
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 20;
 }
 
+/* Spread items across:
+   - justify-content: space-between
+   - we also set a max width and full width container */
 .topnav{
   max-width: var(--content-max);
   margin: 0 auto;
+  width: 100%;
 
   display:flex;
-  justify-content:flex-end; /* tidy and consistent */
   align-items:center;
-  gap: 22px;
+  justify-content: space-between;        /* spread across */
+  gap: 18px;
 
-  padding: 12px 18px;
-  flex-wrap:wrap;
+  padding: 14px 22px;
+  flex-wrap: wrap;
 }
 
 .topnav a{
-  color:#fff !important;
+  color: var(--nu-purple) !important;    /* purple menu text */
   text-decoration:none !important;
   font-weight: 900;
   font-size: 13.5px;
   letter-spacing: 0.10em;
   text-transform: uppercase;
 
-  padding: 8px 4px;
+  padding: 8px 0;
   border-bottom: 2px solid transparent;
 }
 
-.topnav a:hover{
-  border-bottom-color: rgba(255,255,255,0.75);
-}
+.topnav a:hover{ border-bottom-color: rgba(78,42,132,0.35); }
 
 .topnav a.active{
-  border-bottom-color: #fff;
+  border-bottom-color: var(--nu-purple);
 }
 
-/* ---------- Content ---------- */
+/* ---------- Content (tidier width, no huge empty space) ---------- */
 .content{
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 34px 22px 80px;
+  padding: 32px 22px 80px;
+
+  /* speeds rendering on long pages */
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1200px;
 }
 
 h1{
@@ -216,14 +217,9 @@ p, li{
   color: var(--text);
 }
 
-a{
-  color: var(--nu-purple);
-}
+a{ color: var(--nu-purple); }
 
-.meta{
-  color: var(--muted);
-  font-size: 13.5px;
-}
+.meta{ color: var(--muted); font-size: 13.5px; }
 
 /* ---------- Mobile ---------- */
 @media (max-width: 900px){
@@ -233,9 +229,8 @@ a{
     border-bottom: 1px solid var(--border);
   }
   .topnav{
-    justify-content:center;
+    justify-content: center;   /* on small screens, center nav */
+    gap: 14px;
   }
-  .content{
-    padding: 26px 18px 60px;
-  }
+  .content{ padding: 26px 18px 60px; }
 }
