@@ -70,20 +70,20 @@ body{
 /* ---------- Portrait (true oval / ellipse) ---------- */
 /* Less flat sides = ellipse with border-radius:999px */
 .avatar{
-  width: 280px;
-  height: 300px;        /* taller portrait oval */
+  width: 240px;
+  height: 320px;        /* taller portrait oval */
   display:block;
-  margin: 0px auto 0px;
+  margin: 16px auto 14px;
 
   object-fit: cover;
   border-radius: 999px; /* TRUE OVAL */
 
-  border: 0px solid rgba(78,42,132,0.35);
-  outline: 0px solid rgba(78,42,132,0.07);
+  border: 2px solid rgba(78,42,132,0.35);
+  outline: 10px solid rgba(78,42,132,0.07);
   background:#fff;
 
   /* minimal shadow */
-  
+  box-shadow: 0 10px 24px rgba(17,24,39,0.10);
 }
 
 /* ---------- Sidebar text ---------- */
