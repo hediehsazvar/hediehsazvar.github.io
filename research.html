@@ -65,57 +65,73 @@
         </p>
 
         <p class="meta">
-          Keywords: sequential decision-making · stochastic optimization · revenue management · no-shows · overbooking · 0–1 polynomial optimization · MIP reformulations · large-scale optimization · heuristics
+          Keywords: sequential decision-making · stochastic optimization · revenue management · no-shows · overbooking · 0–1 polynomial Programming 
         </p>
 
         <h2>Working papers</h2>
 
-        <p>
-          <strong>Optimal Sequential Job Recommendations with No-Shows</strong><br/>
-          <span class="meta">In preparation for submission to Manufacturing & Service Operations Management.</span>
-        </p>
+<p>
+  <strong>Optimal Sequential Job Recommendations with No-Shows</strong><br/>
+  <span class="meta">In preparation for submission to Manufacturing & Service Operations Management.</span>
+</p>
 
-        <div class="abstract">
-          <strong>Abstract.</strong>
-          We study sequential job recommendation where agents arrive over time and may accept recommended jobs but later fail to show up.
-          We characterize optimal recommendation policies and develop scalable optimization methods to maximize filled jobs and expected revenue.
-        </div>
+<div class="abstract">
 
+  <strong>Problem definition.</strong>
+  The increasing reliance on online platforms to match job opportunities with agents highlights the need for job recommendation policies. Our model accounts for heterogeneous preferences and commitment probabilities for each agent-job pair, as well as varying numbers of agents required across jobs. Agents arrive sequentially and sign up for preferred jobs from the set recommended to them. The objective is to maximize the revenue earned when agents complete their jobs.
+  <br><br>
 
-        <p>
-          <strong>Overbooking in Sequential Job Recommendation Platforms with No-Shows</strong><br/>
-          <span class="meta">In preparation for submission.</span>
-        </p>
+  <strong>Methodology.</strong>
+  We formulate the problem as an unconstrained 0–1 polynomial program with a full-degree objective function. We decompose the polynomial objective into smaller components and develop an efficient recursive evaluation method. Leveraging this decomposition, we characterize structural properties of optimal recommendation policies and develop exact and heuristic solution methods.
+  <br><br>
 
-        <div class="abstract">
-          <strong>Abstract.</strong>
-          We study overbooking decisions in sequential recommendation platforms with no-show risk. We characterize optimal overbooking policies
-          and develop scalable optimization methods to improve fill rates and expected revenue.
-        </div>
+  <strong>Results.</strong>
+  For single-agent jobs, we characterize an optimal threshold policy and develop a strongly polynomial-time backward-induction algorithm. For multi-agent jobs, we establish a nested optimal-solution structure and develop an efficient stepwise heuristic. Our heuristics achieve near-optimal expected revenue, while standard heuristics exhibit large optimality gaps or become computationally infeasible. Relative to the show-to-all policy used in practice, our methods yield significant revenue improvements and quantify the value of arrival-sequence predictability.
+  <br><br>
 
+  <strong>Managerial implications.</strong>
+  This framework applies broadly to staffing and gig platforms and enables selective recommendations that improve expected revenue under no-show risk.
 
-        <p>
-          <strong>Optimization Models and their Reformulations in Job Recommender System with Dependent Preferences and No-Shows.</strong><br/>
-          <span class="meta">Working paper.</span>
-        </p>
-
-        <div class="abstract">
-          <strong>Abstract.</strong>
-          We develop mixed-integer reformulations for high-dimensional 0–1 polynomial optimization problems arising in job recommendation systems
-          with dependent preferences and no-show risk, enabling scalable solution of large instances.
-        </div>
+</div>
 
 
-        <p>
-          <strong>Rollout-Augmented Lookahead Policies for Dynamic Join Decisions in Fork-Join Queues</strong><br/>
-          <span class="meta">In preparation for submission. Links: <a href="#">PDF</a> · <a href="#">Code</a></span>
-        </p>
 
-        <div class="abstract">
-          <strong>Abstract.</strong>
-          We develop rollout-augmented lookahead policies for fork-join queueing systems that approximate optimal dynamic programming performance
-          while remaining computationally tractable.
-        </div>
+<p>
+  <strong>Overbooking in Sequential Job Recommendation Platforms with No-Shows</strong><br/>
+  <span class="meta">In preparation for submission.</span>
+</p>
+
+<div class="abstract">
+
+  The increasing reliance on online platforms to match job opportunities with agents highlights the need for efficient recommendation policies under no-show risk. We extend our prior framework to allow overbooking, enabling more agents to sign up than required to mitigate absenteeism. The resulting problem is a high-degree binary polynomial program. We reformulate the objective to allow polynomial-time evaluation and embed it within a mixed-integer optimization framework that yields exact solutions for moderate instances. For larger instances, we develop scalable heuristics exploiting structural properties of optimal solutions. Computational results demonstrate that overbooking substantially improves expected revenue relative to non-overbooking policies.
+
+</div>
+
+
+
+<p>
+  <strong>Optimization Models and their Reformulations in Job Recommender System with Dependent Preferences and No-Shows.</strong><br/>
+  <span class="meta">Working paper.</span>
+</p>
+
+<div class="abstract">
+
+  We study sequential job recommendation under dependent preferences, heterogeneous agents, and no-show risk. We model agent decisions using discrete choice models, including multinomial logit, Markov chain choice, and exponomial models. For each, we derive exact mixed-integer reformulations capturing capacity constraints and overbooking decisions. We strengthen these formulations using valid inequalities and structure-based heuristics. Computational experiments demonstrate tractability at realistic scales and quantify the impact of preference dependence on recommendation policies.
+
+</div>
+
+
+
+<p>
+  <strong>Rollout-Augmented Lookahead Policies for Dynamic Join Decisions in Fork-Join Queues</strong><br/>
+  <span class="meta">In preparation for submission. Links: <a href="#">PDF</a> · <a href="#">Code</a></span>
+</p>
+
+<div class="abstract">
+
+  Fork-join queues arise in parallel service systems where decisions must balance delay against misclassification risk. We develop rollout-augmented lookahead policies that improve upon threshold heuristics by incorporating simulation-based cost-to-go estimates. Compared to baseline heuristics and tabular Q-learning, our approach significantly reduces long-run average cost. These results demonstrate the effectiveness of approximate dynamic programming techniques in continuous-time decision models.
+
+</div>
 
       </div>
     </main>
