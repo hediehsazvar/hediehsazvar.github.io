@@ -1,29 +1,29 @@
 /* =========================================================
-   Minimalist (pure white) + Northwestern purple
-   Ellipsoid framed portrait
+   Minimalist (Pure White) + Oval Portrait + NU Purple
+   Works with: .page .sidebar .main .topbar .topnav .avatar ...
    ========================================================= */
 
 :root{
   --nu-purple:#4E2A84;
   --nu-purple-dark:#3b1f66;
 
-  --bg:#ffffff;          /* pure white */
+  --bg:#ffffff;
   --panel:#ffffff;
+
   --text:#111827;
   --muted:#6b7280;
   --border:#e5e7eb;
 
   --content-max: 900px;
-  --sidebar-w: 300px;
 }
 
-html,body{
+html, body{
   margin:0;
   padding:0;
   width:100%;
+  overflow-x:hidden;
   background: var(--bg);
   color: var(--text);
-  overflow-x:hidden;
 }
 
 *{
@@ -33,14 +33,15 @@ html,body{
 
 body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  line-height: 1.85;
+  line-height:1.8;
 }
 
-/* ---------------- Layout ---------------- */
+/* ---------- Layout ---------- */
 .page{
   display:grid;
-  grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+  grid-template-columns: 300px minmax(0, 1fr);
   min-height: 100vh;
+  background: var(--bg);
 }
 
 .sidebar{
@@ -49,53 +50,50 @@ body{
   padding: 22px 18px;
 }
 
-.main{min-width:0;}
+.main{
+  min-width:0;
+  background: var(--bg);
+}
 
-/* ---------------- Sidebar brand/logo ---------------- */
+/* ---------- Northwestern logo ---------- */
 .brand{
   display:flex;
   align-items:center;
+  justify-content:flex-start;
   gap:10px;
   margin-bottom: 14px;
 }
 
 .brand-logo{
-  height: 64px;      /* larger by default */
+  height: 64px;        /* make it clearly visible */
   width:auto;
   display:block;
 }
 
-/* ---------------- Photo: framed ellipsoid ----------------
-   Ellipse shape uses fixed width/height.
-   If you want it taller/shorter, change height.
-*/
+/* ---------- Oval portrait (clean frame) ---------- */
 .avatar{
-  width: 240px;
-  height: 300px;               /* ellipsoid portrait */
-  object-fit: cover;           /* clean portrait crop */
+  width: 230px;
+  height: 290px;        /* ellipse shape */
   display:block;
-  margin: 14px auto 14px;
+  margin: 16px auto 14px;
 
-  border-radius: 999px;        /* ellipse */
-  background: #ffffff;
+  object-fit: cover;
+  border-radius: 999px;
 
-  /* minimalist frame */
-  border: 2px solid rgba(78,42,132,0.35);
+  /* minimalist oval frame */
+  border: 2px solid rgba(78,42,132,0.40);
+  outline: 10px solid rgba(78,42,132,0.08);
 
-  /* subtle inner mat */
-  padding: 8px;
-
-  /* ultra-light shadow (still minimalist) */
-  box-shadow: 0 10px 28px rgba(17,24,39,0.10);
+  background:#fff;
 }
 
-/* ---------------- Sidebar text ---------------- */
+/* ---------- Sidebar text ---------- */
 .side-name{
   text-align:center;
   font-weight: 900;
-  font-size: 22px;
+  font-size: 21px;
   margin: 10px 0 4px;
-  letter-spacing: -0.01em;
+  letter-spacing:-0.01em;
   color: var(--nu-purple-dark);
 }
 
@@ -105,14 +103,14 @@ body{
   color: var(--muted);
 }
 
-.side-affil{margin-top:6px;}
+.side-affil{ margin-top: 6px; }
 
-/* ---------------- Contact block ---------------- */
 .side-section-title{
   margin-top: 22px;
   padding-top: 16px;
   border-top: 1px solid var(--border);
   text-align:center;
+
   font-weight: 900;
   font-size: 12px;
   letter-spacing: 0.14em;
@@ -120,6 +118,7 @@ body{
   color: var(--nu-purple);
 }
 
+/* ---------- Contact icons (minimal) ---------- */
 .side-icons{
   display:flex;
   justify-content:center;
@@ -132,7 +131,8 @@ body{
   height:44px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: #fff;
+  background:#fff;
+
   display:flex;
   align-items:center;
   justify-content:center;
@@ -149,7 +149,7 @@ body{
   fill: var(--nu-purple);
 }
 
-/* ---------------- Top navigation (purple) ---------------- */
+/* ---------- Top nav (NU purple bar, minimalist) ---------- */
 .topbar{
   background: var(--nu-purple);
   position: sticky;
@@ -158,37 +158,39 @@ body{
 }
 
 .topnav{
-  max-width: 1100px;
+  max-width: var(--content-max);
   margin: 0 auto;
+
   display:flex;
-  justify-content:center;
+  justify-content:flex-end; /* tidy and consistent */
   align-items:center;
   gap: 22px;
-  padding: 14px 18px;
-  flex-wrap: wrap;
+
+  padding: 12px 18px;
+  flex-wrap:wrap;
 }
 
 .topnav a{
-  color: #fff !important;
-  text-decoration: none !important;
+  color:#fff !important;
+  text-decoration:none !important;
   font-weight: 900;
-  font-size: 14px;
-  letter-spacing: 0.06em;
+  font-size: 13.5px;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
 
-  padding: 8px 10px;
+  padding: 8px 4px;
   border-bottom: 2px solid transparent;
 }
 
 .topnav a:hover{
-  border-bottom-color: rgba(255,255,255,0.70);
+  border-bottom-color: rgba(255,255,255,0.75);
 }
 
 .topnav a.active{
   border-bottom-color: #fff;
 }
 
-/* ---------------- Main content ---------------- */
+/* ---------- Content ---------- */
 .content{
   max-width: var(--content-max);
   margin: 0 auto;
@@ -197,9 +199,9 @@ body{
 
 h1{
   font-size: 46px;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  line-height: 1.12;
   margin: 14px 0 18px;
+  letter-spacing: -0.03em;
   color: var(--nu-purple);
 }
 
@@ -210,7 +212,7 @@ h2{
 }
 
 p, li{
-  font-size: 15.8px;
+  font-size: 15.7px;
   color: var(--text);
 }
 
@@ -218,29 +220,22 @@ a{
   color: var(--nu-purple);
 }
 
-/* tidy lists */
-ul{padding-left: 18px; margin-top: 8px;}
-li{margin: 6px 0;}
-
 .meta{
-  font-size: 13.5px;
   color: var(--muted);
+  font-size: 13.5px;
 }
 
-/* ---------------- PDF iframe in CV ---------------- */
-iframe{
-  border: 1px solid var(--border) !important;
-  border-radius: 12px;
-  background: #fff;
-}
-
-/* ---------------- Responsive ---------------- */
+/* ---------- Mobile ---------- */
 @media (max-width: 900px){
-  .page{grid-template-columns: 1fr;}
+  .page{ grid-template-columns: 1fr; }
   .sidebar{
-    border-right: none;
+    border-right:none;
     border-bottom: 1px solid var(--border);
   }
-  .brand{justify-content:center;}
-  .content{padding: 26px 18px 70px;}
+  .topnav{
+    justify-content:center;
+  }
+  .content{
+    padding: 26px 18px 60px;
+  }
 }
