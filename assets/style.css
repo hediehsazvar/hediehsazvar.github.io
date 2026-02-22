@@ -68,7 +68,7 @@ body{
 
 /* ---------- Portrait (true oval, NO frame) ---------- */
 .avatar{
-  width: 230px;
+  width: 280px;
   height: 340px;
   display:block;
   margin: 16px auto 14px;
