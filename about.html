@@ -13,10 +13,26 @@
   <link rel="canonical" href="https://hediehsazvar.github.io/about.html">
 
   <style>
-    /* Small photo inside the About content */
+    /* About intro block (NO photo here) */
+    .about-head{
+      margin-top:6px;
+      margin-bottom:18px;
+      max-width: 860px; /* keeps lines readable */
+    }
 
+    /* Compact, tidy sections */
+    .about-section h2{
+      margin-top:18px;
+      margin-bottom:8px;
+    }
+    .about-list{
+      margin:0;
+      padding-left:18px;
+      line-height:1.7;
+    }
+    .muted{ color:#666; }
 
-    /* Outside research boxed layout */
+    /* Outside research boxed layout (photo ONLY here) */
     .outside-card{
       display:flex;
       align-items:flex-start;
@@ -35,6 +51,7 @@
       border-radius:12px;
       flex:0 0 auto;
       border:1px solid rgba(0,0,0,.10);
+      background:#fff;
     }
     .outside-text p{
       margin:0;
@@ -42,9 +59,6 @@
     }
 
     @media (max-width: 900px){
-      .about-head{ flex-direction:column; align-items:flex-start; }
-      .about-photo{ width:160px; height:200px; }
-
       .outside-card{ flex-direction:column; }
       .outside-photo{ width:210px; height:210px; }
     }
@@ -93,21 +107,17 @@
       <div class="content about-section">
         <h1>About</h1>
 
+        <!-- NO picture here -->
         <div class="about-head">
-          <!-- Small photo in the main content (kept as-is) -->
-          <img class="about-photo" src="assets/hediehsazvar.jpg" alt="Hedieh Sazvar"
-               onerror="this.style.display='none';">
-          <div class="about-text">
-            <p>
-              I am a Ph.D. candidate in Operations Research in the Department of Industrial Engineering and Management Sciences at
-              Northwestern University, advised by Professor Seyed M.R. Iravani and Professor Sanjay Mehrotra. I expect to graduate in summer 2026.
-            </p>
+          <p>
+            I am a Ph.D. candidate in Operations Research in the Department of Industrial Engineering and Management Sciences at
+            Northwestern University, advised by Professor Seyed M.R. Iravani and Professor Sanjay Mehrotra. I expect to graduate in summer 2026.
+          </p>
 
-            <p>
-              My research interests are in <strong>stochastic optimization</strong> and <strong>large-scale optimization</strong>,
-              with applications in <strong>revenue management</strong>, <strong>assortment optimization</strong>, and <strong>matching</strong>.
-            </p>
-          </div>
+          <p>
+            My research interests are in <strong>stochastic optimization</strong> and <strong>large-scale optimization</strong>,
+            with applications in <strong>revenue management</strong>, <strong>assortment optimization</strong>, and <strong>matching</strong>.
+          </p>
         </div>
 
         <h2>Education</h2>
@@ -124,7 +134,7 @@
 
         <h2>Outside research</h2>
         <div class="outside-card">
-          <!-- Photo moved here, bigger + square -->
+          <!-- Photo ONLY here -->
           <img class="outside-photo" src="assets/hediehsazvar.jpg" alt="Hedieh outside research"
                onerror="this.style.display='none';">
           <div class="outside-text">
