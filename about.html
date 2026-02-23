@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Hedieh Sazvar | About</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+
+  <meta name="title" content="About | Hedieh Sazvar">
+  <meta name="description" content="About Hedieh Sazvar: education, research interests, and background.">
+  <meta name="author" content="Hedieh Sazvar">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://hediehsazvar.github.io/about.html">
+
+  <style>
+    /* Small photo inside the About content */
+    .about-head{
+      display:flex;
+      align-items:flex-start;
+      gap:18px;
+      margin-top:6px;
+      margin-bottom:18px;
+    }
+    .about-photo{
+      width:140px;
+      height:180px;
+      object-fit:cover;
+      border-radius:12px;
+      flex:0 0 auto;
+    }
+    .about-text{
+      flex:1 1 auto;
+      min-width:0;
+    }
+
+    /* Compact, tidy sections */
+    .about-section h2{
+      margin-top:18px;
+      margin-bottom:8px;
+    }
+    .about-list{
+      margin:0;
+      padding-left:18px;
+      line-height:1.7;
+    }
+    .muted{
+      color:#666;
+    }
+
+    @media (max-width: 900px){
+      .about-head{ flex-direction:column; align-items:flex-start; }
+      .about-photo{ width:160px; height:200px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/northwestern-logo.png" alt="Northwestern University"
+             onerror="this.style.display='none'; document.getElementById('brandText').style.display='block';">
+        <div id="brandText" class="brand-text" style="display:none;">NORTHWESTERN</div>
+      </div>
+
+      <!-- Sidebar headshot -->
+      <img class="avatar" src="assets/IMG_5699.jpeg" alt="Hedieh Sazvar"
+           onerror="this.style.display='none';">
+
+      <h2 class="side-name">Hedieh Sazvar</h2>
+      <div class="side-role">PhD Candidate</div>
+      <div class="side-affil">
+        Operations Research (IEMS)<br/>
+        Northwestern University
+      </div>
+
+      <div class="side-section-title">Contact</div>
+      <div class="side-icons">
+        <a class="iconbtn" href="mailto:hedieh.sazvar@northwestern.edu">Email</a>
+        <a class="iconbtn" href="https://www.linkedin.com/in/hedieh-sazvar/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="topnav">
+          <a href="/" class="navlink">Home</a>
+          <a href="/about.html" class="navlink active">About</a>
+          <a href="/research.html" class="navlink">Research</a>
+          <a href="/cv.html" class="navlink">CV</a>
+        </div>
+      </div>
+
+      <div class="content about-section">
+        <h1>About</h1>
+
+        <div class="about-head">
+          <!-- Small photo in the main content -->
+          <img class="about-photo" src="assets/IMG_5699.jpeg" alt="Hedieh Sazvar"
+               onerror="this.style.display='none';">
+          <div class="about-text">
+            <p>
+              I am a Ph.D. candidate in Operations Research in the Department of Industrial Engineering and Management Sciences at
+              Northwestern University, advised by Professor Seyed M.R. Iravani and Professor Sanjay Mehrotra. I expect to graduate in summer 2026.
+            </p>
+
+            <p>
+              My research interests are in <strong>stochastic optimization</strong> and <strong>large-scale optimization</strong>,
+              with applications in <strong>revenue management</strong>, <strong>assortment optimization</strong>, and <strong>matching</strong>.
+            </p>
+
+            
+          </div>
+        </div>
+
+        <h2>Education</h2>
+        <ul class="about-list">
+          <li><strong>Ph.D.</strong>, Operations Research, Northwestern University <span class="muted">(2021–2026)</span></li>
+          <li><strong>M.S.</strong>, Industrial Engineering, Northwestern University <span class="muted">(2021–2022)</span></li>
+          <li><strong>B.S.</strong>, Industrial Engineering, Sharif University of Technology <span class="muted">(2016–2021)</span></li>
+        </ul>
+
+        <h2>Industry experience</h2>
+        <ul class="about-list">
+          <li><strong>Data Science Intern</strong>, Moloco (Ads), Redwood City, CA</li>
+        </ul>
+
+        <h2>Outside research</h2>
+        <p>
+          Outside of research, I spend a lot of my time on piano, running and fitness training, biking, hiking, and badminton. I’m also a taekwondo black belt. I love cooking and baking, watercolor painting, hosting friends, and hanging out with my kittens.
+
+        </p>
+
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>
