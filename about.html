@@ -13,26 +13,6 @@
   <link rel="canonical" href="https://hediehsazvar.github.io/about.html">
 
   <style>
-    /* Small photo inside the About content */
-    .about-head{
-      display:flex;
-      align-items:flex-start;
-      gap:18px;
-      margin-top:6px;
-      margin-bottom:18px;
-    }
-    .about-photo{
-      width:140px;
-      height:180px;
-      object-fit:cover;
-      border-radius:12px;
-      flex:0 0 auto;
-    }
-    .about-text{
-      flex:1 1 auto;
-      min-width:0;
-    }
-
     /* Compact, tidy sections */
     .about-section h2{
       margin-top:18px;
@@ -43,13 +23,30 @@
       padding-left:18px;
       line-height:1.7;
     }
-    .muted{
-      color:#666;
+    .muted{ color:#666; }
+
+    /* Photo INSIDE "Outside research" section */
+    .outside-wrap{
+      display:flex;
+      align-items:flex-start;
+      gap:18px;
+      margin-top:8px;
+    }
+    .outside-photo{
+      width:170px;          /* slightly bigger */
+      height:170px;         /* square */
+      object-fit:cover;
+      border-radius:10px;   /* subtle rounding; set to 0 if you want perfectly sharp corners */
+      flex:0 0 auto;
+    }
+    .outside-text{
+      flex:1 1 auto;
+      min-width:0;
     }
 
     @media (max-width: 900px){
-      .about-head{ flex-direction:column; align-items:flex-start; }
-      .about-photo{ width:160px; height:200px; }
+      .outside-wrap{ flex-direction:column; }
+      .outside-photo{ width:190px; height:190px; }
     }
   </style>
 </head>
@@ -64,9 +61,7 @@
         <div id="brandText" class="brand-text" style="display:none;">NORTHWESTERN</div>
       </div>
 
-      <!-- Sidebar headshot -->
-      <img class="avatar" src="assets/headshot.JPG" alt="Hedieh Sazvar"
-           onerror="this.style.display='none';">
+      <!-- (Removed sidebar headshot) -->
 
       <h2 class="side-name">Hedieh Sazvar</h2>
       <div class="side-role">PhD Candidate</div>
@@ -95,24 +90,15 @@
       <div class="content about-section">
         <h1>About</h1>
 
-        <div class="about-head">
-          <!-- Small photo in the main content -->
-          <img class="about-photo" src="assets/hediehsazvar.jpg" alt="Hedieh Sazvar"
-               onerror="this.style.display='none';">
-          <div class="about-text">
-            <p>
-              I am a Ph.D. candidate in Operations Research in the Department of Industrial Engineering and Management Sciences at
-              Northwestern University, advised by Professor Seyed M.R. Iravani and Professor Sanjay Mehrotra. I expect to graduate in summer 2026.
-            </p>
+        <p>
+          I am a Ph.D. candidate in Operations Research in the Department of Industrial Engineering and Management Sciences at
+          Northwestern University, advised by Professor Seyed M.R. Iravani and Professor Sanjay Mehrotra. I expect to graduate in summer 2026.
+        </p>
 
-            <p>
-              My research interests are in <strong>stochastic optimization</strong> and <strong>large-scale optimization</strong>,
-              with applications in <strong>revenue management</strong>, <strong>assortment optimization</strong>, and <strong>matching</strong>.
-            </p>
-
-            
-          </div>
-        </div>
+        <p>
+          My research interests are in <strong>stochastic optimization</strong> and <strong>large-scale optimization</strong>,
+          with applications in <strong>revenue management</strong>, <strong>assortment optimization</strong>, and <strong>matching</strong>.
+        </p>
 
         <h2>Education</h2>
         <ul class="about-list">
@@ -127,10 +113,17 @@
         </ul>
 
         <h2>Outside research</h2>
-        <p>
-          Outside of research, I spend a lot of my time on piano, running and fitness training, biking, hiking, and badminton. I’m also a taekwondo black belt. I love cooking and baking, watercolor painting, hosting friends, and hanging out with my kittens.
-
-        </p>
+        <div class="outside-wrap">
+          <!-- Photo moved here -->
+          <img class="outside-photo" src="assets/hediehsazvar.jpg" alt="Hedieh Sazvar"
+               onerror="this.style.display='none';">
+          <div class="outside-text">
+            <p>
+              Outside of research, I enjoy playing piano, running, and staying active—strength training, biking, hiking, and badminton.
+              I’m also a taekwondo black belt. I love cooking and baking, watercolor painting, hosting friends, and spending time with my kittens.
+            </p>
+          </div>
+        </div>
 
       </div>
     </main>
