@@ -13,6 +13,26 @@
   <link rel="canonical" href="https://hediehsazvar.github.io/about.html">
 
   <style>
+    /* Small photo inside the About content */
+    .about-head{
+      display:flex;
+      align-items:flex-start;
+      gap:18px;
+      margin-top:6px;
+      margin-bottom:18px;
+    }
+    .about-photo{
+      width:140px;
+      height:180px;
+      object-fit:cover;
+      border-radius:12px;
+      flex:0 0 auto;
+    }
+    .about-text{
+      flex:1 1 auto;
+      min-width:0;
+    }
+
     /* Compact, tidy sections */
     .about-section h2{
       margin-top:18px;
@@ -23,65 +43,41 @@
       padding-left:18px;
       line-height:1.7;
     }
-    .muted{ color:#666; }
-
-    /* Sidebar headshot: keep it present + tidy */
-    .avatar{
-      width:170px;
-      height:170px;
-      object-fit:cover;
-      border-radius:14px;
-      display:block;
-      margin:14px auto 10px;
-      border:1px solid rgba(0,0,0,.10);
-      box-shadow: 0 8px 22px rgba(0,0,0,.06);
-      background:#fff;
+    .muted{
+      color:#666;
     }
 
-    /* Outside research: structured card */
+    /* Outside research boxed layout */
     .outside-card{
-      display:grid;
-      grid-template-columns: 180px 1fr;
-      gap:18px;
-      align-items:start;
+      display:flex;
+      align-items:flex-start;
+      gap:16px;
       margin-top:10px;
       padding:14px;
       border:1px solid rgba(0,0,0,.10);
-      border-radius:16px;
+      border-radius:14px;
       background:#fff;
-      max-width: 860px; /* keeps it from stretching too wide */
+      max-width: 860px;
     }
     .outside-photo{
       width:180px;     /* slightly bigger */
       height:180px;    /* square */
       object-fit:cover;
-      border-radius:14px;
+      border-radius:12px;
+      flex:0 0 auto;
       border:1px solid rgba(0,0,0,.10);
-      box-shadow: 0 8px 22px rgba(0,0,0,.06);
-      background:#fff;
     }
-    .outside-lead{
-      margin:0 0 10px 0;
-      line-height:1.65;
-    }
-    .outside-list{
+    .outside-text p{
       margin:0;
-      padding-left:18px;
       line-height:1.7;
-      columns:2;
-      column-gap:28px;
     }
-    .outside-list li{ break-inside:avoid; }
 
     @media (max-width: 900px){
-      .outside-card{
-        grid-template-columns: 1fr;
-      }
-      .outside-photo{
-        width:210px;
-        height:210px;
-      }
-      .outside-list{ columns:1; }
+      .about-head{ flex-direction:column; align-items:flex-start; }
+      .about-photo{ width:160px; height:200px; }
+
+      .outside-card{ flex-direction:column; }
+      .outside-photo{ width:210px; height:210px; }
     }
   </style>
 </head>
@@ -89,6 +85,7 @@
 <body>
   <div class="page">
 
+    <!-- Sidebar EXACTLY as you provided -->
     <aside class="sidebar">
       <div class="brand">
         <img class="brand-logo" src="assets/northwestern-logo.png" alt="Northwestern University"
@@ -96,9 +93,8 @@
         <div id="brandText" class="brand-text" style="display:none;">NORTHWESTERN</div>
       </div>
 
-      <!-- Sidebar headshot (restored) -->
+      <!-- Sidebar headshot -->
       <img class="avatar" src="assets/headshot.JPG" alt="Hedieh Sazvar"
-           loading="lazy" decoding="async"
            onerror="this.style.display='none';">
 
       <h2 class="side-name">Hedieh Sazvar</h2>
@@ -128,15 +124,22 @@
       <div class="content about-section">
         <h1>About</h1>
 
-        <p>
-          I am a Ph.D. candidate in Operations Research in the Department of Industrial Engineering and Management Sciences at
-          Northwestern University, advised by Professor Seyed M.R. Iravani and Professor Sanjay Mehrotra. I expect to graduate in summer 2026.
-        </p>
+        <div class="about-head">
+          <!-- Small photo in the main content (kept as-is) -->
+          <img class="about-photo" src="assets/hediehsazvar.jpg" alt="Hedieh Sazvar"
+               onerror="this.style.display='none';">
+          <div class="about-text">
+            <p>
+              I am a Ph.D. candidate in Operations Research in the Department of Industrial Engineering and Management Sciences at
+              Northwestern University, advised by Professor Seyed M.R. Iravani and Professor Sanjay Mehrotra. I expect to graduate in summer 2026.
+            </p>
 
-        <p>
-          My research interests are in <strong>stochastic optimization</strong> and <strong>large-scale optimization</strong>,
-          with applications in <strong>revenue management</strong>, <strong>assortment optimization</strong>, and <strong>matching</strong>.
-        </p>
+            <p>
+              My research interests are in <strong>stochastic optimization</strong> and <strong>large-scale optimization</strong>,
+              with applications in <strong>revenue management</strong>, <strong>assortment optimization</strong>, and <strong>matching</strong>.
+            </p>
+          </div>
+        </div>
 
         <h2>Education</h2>
         <ul class="about-list">
@@ -152,23 +155,14 @@
 
         <h2>Outside research</h2>
         <div class="outside-card">
+          <!-- Photo moved here, bigger + square -->
           <img class="outside-photo" src="assets/hediehsazvar.jpg" alt="Hedieh outside research"
-               loading="lazy" decoding="async"
                onerror="this.style.display='none';">
-          <div>
-            <p class="outside-lead">
-              Outside of research, I enjoy playing piano and staying active. I’m also a taekwondo black belt, and I love hosting friends.
+          <div class="outside-text">
+            <p>
+              Outside of research, I enjoy playing piano and staying active—running and fitness training, strength training, biking, hiking, and badminton.
+              I’m also a taekwondo black belt. I love cooking and baking, watercolor painting, hosting friends, and spending time with my kittens.
             </p>
-            <ul class="outside-list">
-              <li>Running</li>
-              <li>Strength training</li>
-              <li>Biking</li>
-              <li>Hiking</li>
-              <li>Badminton</li>
-              <li>Cooking and baking</li>
-              <li>Watercolor painting</li>
-              <li>Spending time with my kittens</li>
-            </ul>
           </div>
         </div>
 
