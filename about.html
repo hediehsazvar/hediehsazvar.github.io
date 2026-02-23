@@ -25,28 +25,63 @@
     }
     .muted{ color:#666; }
 
-    /* Photo INSIDE "Outside research" section */
-    .outside-wrap{
-      display:flex;
-      align-items:flex-start;
-      gap:18px;
-      margin-top:8px;
-    }
-    .outside-photo{
-      width:170px;          /* slightly bigger */
-      height:170px;         /* square */
+    /* Sidebar headshot: keep it present + tidy */
+    .avatar{
+      width:170px;
+      height:170px;
       object-fit:cover;
-      border-radius:10px;   /* subtle rounding; set to 0 if you want perfectly sharp corners */
-      flex:0 0 auto;
-    }
-    .outside-text{
-      flex:1 1 auto;
-      min-width:0;
+      border-radius:14px;
+      display:block;
+      margin:14px auto 10px;
+      border:1px solid rgba(0,0,0,.10);
+      box-shadow: 0 8px 22px rgba(0,0,0,.06);
+      background:#fff;
     }
 
+    /* Outside research: structured card */
+    .outside-card{
+      display:grid;
+      grid-template-columns: 180px 1fr;
+      gap:18px;
+      align-items:start;
+      margin-top:10px;
+      padding:14px;
+      border:1px solid rgba(0,0,0,.10);
+      border-radius:16px;
+      background:#fff;
+      max-width: 860px; /* keeps it from stretching too wide */
+    }
+    .outside-photo{
+      width:180px;     /* slightly bigger */
+      height:180px;    /* square */
+      object-fit:cover;
+      border-radius:14px;
+      border:1px solid rgba(0,0,0,.10);
+      box-shadow: 0 8px 22px rgba(0,0,0,.06);
+      background:#fff;
+    }
+    .outside-lead{
+      margin:0 0 10px 0;
+      line-height:1.65;
+    }
+    .outside-list{
+      margin:0;
+      padding-left:18px;
+      line-height:1.7;
+      columns:2;
+      column-gap:28px;
+    }
+    .outside-list li{ break-inside:avoid; }
+
     @media (max-width: 900px){
-      .outside-wrap{ flex-direction:column; }
-      .outside-photo{ width:190px; height:190px; }
+      .outside-card{
+        grid-template-columns: 1fr;
+      }
+      .outside-photo{
+        width:210px;
+        height:210px;
+      }
+      .outside-list{ columns:1; }
     }
   </style>
 </head>
@@ -61,7 +96,10 @@
         <div id="brandText" class="brand-text" style="display:none;">NORTHWESTERN</div>
       </div>
 
-      <!-- (Removed sidebar headshot) -->
+      <!-- Sidebar headshot (restored) -->
+      <img class="avatar" src="assets/headshot.JPG" alt="Hedieh Sazvar"
+           loading="lazy" decoding="async"
+           onerror="this.style.display='none';">
 
       <h2 class="side-name">Hedieh Sazvar</h2>
       <div class="side-role">PhD Candidate</div>
@@ -113,15 +151,24 @@
         </ul>
 
         <h2>Outside research</h2>
-        <div class="outside-wrap">
-          <!-- Photo moved here -->
-          <img class="outside-photo" src="assets/hediehsazvar.jpg" alt="Hedieh Sazvar"
+        <div class="outside-card">
+          <img class="outside-photo" src="assets/hediehsazvar.jpg" alt="Hedieh outside research"
+               loading="lazy" decoding="async"
                onerror="this.style.display='none';">
-          <div class="outside-text">
-            <p>
-              Outside of research, I enjoy playing piano, running, and staying active—strength training, biking, hiking, and badminton.
-              I’m also a taekwondo black belt. I love cooking and baking, watercolor painting, hosting friends, and spending time with my kittens.
+          <div>
+            <p class="outside-lead">
+              Outside of research, I enjoy playing piano and staying active. I’m also a taekwondo black belt, and I love hosting friends.
             </p>
+            <ul class="outside-list">
+              <li>Running</li>
+              <li>Strength training</li>
+              <li>Biking</li>
+              <li>Hiking</li>
+              <li>Badminton</li>
+              <li>Cooking and baking</li>
+              <li>Watercolor painting</li>
+              <li>Spending time with my kittens</li>
+            </ul>
           </div>
         </div>
 
