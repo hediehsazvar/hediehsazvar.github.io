@@ -102,6 +102,18 @@ target="_blank">
 LinkedIn
 </a>
 
+<!-- TODO: add Google Scholar and GitHub once you have profiles -->
+<!--
+<a class="iconbtn" href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Scholar</a>
+<a class="iconbtn" href="https://github.com/YOUR_HANDLE" target="_blank">GitHub</a>
+-->
+
+<a class="iconbtn"
+href="assets/CV.pdf"
+target="_blank">
+CV (PDF)
+</a>
+
 </div>
 
 </aside>
@@ -125,15 +137,12 @@ LinkedIn
 
 <h1>Research</h1>
 
-
-<h2>Sequential job recommendation under no-shows</h2>
-
 <p>
-I study online matching platforms where agents arrive sequentially and the platform recommends limited-capacity jobs under uncertain commitment (no-shows). My work characterizes the structure of optimal recommendation and overbooking policies and develops scalable optimization methods to maximize filled jobs and expected revenue.
+My research develops optimization and sequential decision-making methods for online matching platforms and dynamic systems under uncertainty. Three of the papers below form a connected line of work on <strong>sequential job recommendation with no-shows</strong> &mdash; characterizing optimal recommendation policies, extending to overbooking, and generalizing to dependent preferences via discrete choice models. The fourth applies <strong>approximate dynamic programming</strong> to a different setting: fork-join queueing systems with partial observations.
 </p>
 
 <p class="meta">
-Keywords: revenue management · no-shows · overbooking · sequential decision-making · stochastic optimization · 0-1 polynomial programming
+Keywords: stochastic optimization &middot; 0-1 polynomial programming &middot; discrete choice models &middot; mixed-integer programming &middot; approximate dynamic programming &middot; sequential decision-making &middot; revenue management &middot; matching platforms
 </p>
 
 
@@ -144,28 +153,36 @@ Keywords: revenue management · no-shows · overbooking · sequential decision-m
 <strong>Optimal Sequential Job Recommendations with No-Shows</strong><br/>
 <span class="meta">
 Hedieh Sazvar, Seyed M.R. Iravani, Sanjay Mehrotra<br/>
-In preparation for submission to Manufacturing & Service Operations Management.
-· <a href="#" onclick="openAbstract('abs1'); return false;">Abstract</a>
+In preparation for submission to Manufacturing &amp; Service Operations Management.
+&middot; <a href="#" onclick="openAbstract('abs1'); return false;">Abstract</a>
+</span><br/>
+<span class="meta">
+Threshold-optimal recommendation policies under no-shows; strongly polynomial-time exact algorithm for single-agent jobs and a nested-structure heuristic for multi-agent jobs. Quantifies the value of arrival-sequence predictability.
 </span>
 </p>
-
 
 <p>
 <strong>Overbooking in Sequential Job Recommendation Platforms with No-Shows</strong><br/>
 <span class="meta">
 Hedieh Sazvar, Seyed M.R. Iravani, Sanjay Mehrotra<br/>
 In preparation for submission.
-· <a href="#" onclick="openAbstract('abs2'); return false;">Abstract</a>
+&middot; <a href="#" onclick="openAbstract('abs2'); return false;">Abstract</a>
+</span><br/>
+<span class="meta">
+Polynomial-time evaluation of the high-degree polynomial objective embedded in a MIP for exact solutions; structure-exploiting heuristic for large instances.
 </span>
 </p>
 
-
+  
 <p>
-<strong>Optimization Models and their Reformulations in Job Recommender System with Dependent Preferences and No-Shows.</strong><br/>
+<strong>Optimization Models and Reformulations for Job Recommender Systems with Dependent Preferences and No-Shows</strong><br/>
 <span class="meta">
 Hedieh Sazvar, Seyed M.R. Iravani, Sanjay Mehrotra<br/>
 In preparation for submission to INFORMS Journal on Computing.
-· <a href="#" onclick="openAbstract('abs3'); return false;">Abstract</a>
+&middot; <a href="#" onclick="openAbstract('abs3'); return false;">Abstract</a>
+</span><br/>
+<span class="meta">
+Extends the framework to dependent preferences via discrete choice models (multinomial logit, Markov chain choice, exponomial); derives exact MIP reformulations strengthened with valid inequalities and constructive heuristics.
 </span>
 </p>
 
@@ -175,7 +192,10 @@ In preparation for submission to INFORMS Journal on Computing.
 <span class="meta">
 Hedieh Sazvar<br/>
 In preparation for submission.
-· <a href="#" onclick="openAbstract('abs4'); return false;">Abstract</a>
+&middot; <a href="#" onclick="openAbstract('abs4'); return false;">Abstract</a>
+</span><br/>
+<span class="meta">
+<em>k</em>-step lookahead with <em>H</em>-step simulation-based rollout for sequential information-gathering decisions in continuous-time queueing systems with partial observations; benchmarked against threshold heuristics and tabular Q-learning.
 </span>
 </p>
 
@@ -198,7 +218,7 @@ In preparation for submission.
 </p>
 
 <p>
-<strong>Methodology:</strong> We formulate the problem as an unconstrained 0–1 polynomial program with a full-degree objective function. We decompose the polynomial objective function into smaller components and develop an efficient recursive method to evaluate it. Leveraging this decomposition, we characterize structural properties of optimal recommendation policies and develop exact and heuristic solution methods.
+<strong>Methodology:</strong> We formulate the problem as an unconstrained 0&ndash;1 polynomial program with a full-degree objective function. We decompose the polynomial objective function into smaller components and develop an efficient recursive method to evaluate it. Leveraging this decomposition, we characterize structural properties of optimal recommendation policies and develop exact and heuristic solution methods.
 </p>
 
 <p>
@@ -220,7 +240,7 @@ In preparation for submission.
 <h3>Abstract</h3>
 
 <p>
-The increasing reliance on online platforms to match job opportunities with agents across various industries highlights the need for efficient job recommendation policies. This paper extends our prior work on sequential job recommendation with different preferences and commitment probabilities for each agent-job pair, as well as the varying numbers of agents required for different jobs. The model allows more agents to sign up for each job than are required, thereby mitigating the risk of absenteeism. The objective is to maximize the platform’s expected revenue, which is earned when agents complete their jobs. The resulting optimization problem is a high-degree binary polynomial program. We reformulate the objective so that it can be evaluated in polynomial time and embed this evaluation in a mixed-integer program that provides exact solutions for moderate-sized instances. For larger instances, we develop a heuristic algorithm that exploits structural properties of the optimal solution to generate near-optimal policies efficiently. Computational experiments demonstrate that overbooking can substantially improve expected revenue compared with non-overbooking policies.</p>
+The increasing reliance on online platforms to match job opportunities with agents across various industries highlights the need for efficient job recommendation policies. This paper extends our prior work on sequential job recommendation with different preferences and commitment probabilities for each agent-job pair, as well as the varying numbers of agents required for different jobs. The model allows more agents to sign up for each job than are required, thereby mitigating the risk of absenteeism. The objective is to maximize the platform's expected revenue, which is earned when agents complete their jobs. The resulting optimization problem is a high-degree binary polynomial program. We reformulate the objective so that it can be evaluated in polynomial time and embed this evaluation in a mixed-integer program that provides exact solutions for moderate-sized instances. For larger instances, we develop a heuristic algorithm that exploits structural properties of the optimal solution to generate near-optimal policies efficiently. Computational experiments demonstrate that overbooking can substantially improve expected revenue compared with non-overbooking policies.</p>
 
 </div>
 </div>
@@ -233,7 +253,7 @@ The increasing reliance on online platforms to match job opportunities with agen
 <h3>Abstract</h3>
 
 <p>
-Online job-matching platforms, from nurse–shift staffing to freelance and volunteer services, face a revenue-management problem in which the platform recommends jobs to sequentially arriving agents. Jobs can require multiple agents, agents are heterogeneous in both preferences and commitment, and no-shows reduce the number of completed jobs. Overbooking, i.e., allowing more agents to sign up than are ultimately required, mitigates no-shows but induces dependence across recommendation decisions and significantly increases computational complexity. Our prior work addressed this setting under independent preferences by characterizing optimal recommendation policies and developing exact and heuristic solution methods for deterministic and stochastic arrival sequences. We extend this framework to dependent preferences by modeling an agent’s sign-up decision as a function of the entire recommended set through discrete choice models. We consider three choice models—the multinomial logit model, the Markov chain choice model, and the exponomial model—and, for each, derive an exact mixed-integer programming reformulation of the recommendation problem with heterogeneous agents, varying numbers of agents required across jobs, no-shows, and overbooking. We strengthen these formulations using constructive heuristics and valid inequalities that exploit problem structure. A computational study quantifies the impact of dependent preferences relative to independence-based benchmarks and demonstrates that the strengthened formulations remain tractable for real-world instance sizes.</p>
+Online job-matching platforms, from nurse&ndash;shift staffing to freelance and volunteer services, face a revenue-management problem in which the platform recommends jobs to sequentially arriving agents. Jobs can require multiple agents, agents are heterogeneous in both preferences and commitment, and no-shows reduce the number of completed jobs. Overbooking, i.e., allowing more agents to sign up than are ultimately required, mitigates no-shows but induces dependence across recommendation decisions and significantly increases computational complexity. Our prior work addressed this setting under independent preferences by characterizing optimal recommendation policies and developing exact and heuristic solution methods for deterministic and stochastic arrival sequences. We extend this framework to dependent preferences by modeling an agent's sign-up decision as a function of the entire recommended set through discrete choice models. We consider three choice models&mdash;the multinomial logit model, the Markov chain choice model, and the exponomial model&mdash;and, for each, derive an exact mixed-integer programming reformulation of the recommendation problem with heterogeneous agents, varying numbers of agents required across jobs, no-shows, and overbooking. We strengthen these formulations using constructive heuristics and valid inequalities that exploit problem structure. A computational study quantifies the impact of dependent preferences relative to independence-based benchmarks and demonstrates that the strengthened formulations remain tractable for real-world instance sizes.</p>
 
 </div>
 </div>
