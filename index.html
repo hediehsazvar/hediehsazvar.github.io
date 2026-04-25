@@ -49,11 +49,23 @@
       href="mailto:hedieh.sazvar@northwestern.edu">
       Email
       </a>
-      
+
       <a class="iconbtn"
       href="https://www.linkedin.com/in/hedieh-sazvar/"
       target="_blank">
       LinkedIn
+      </a>
+
+      <!-- TODO: add Google Scholar and GitHub once you have profiles -->
+      <!--
+      <a class="iconbtn" href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Scholar</a>
+      <a class="iconbtn" href="https://github.com/YOUR_HANDLE" target="_blank">GitHub</a>
+      -->
+
+      <a class="iconbtn"
+      href="assets/CV.pdf"
+      target="_blank">
+      CV (PDF)
       </a>
 
     </div>
@@ -85,30 +97,61 @@
       <h1>Hedieh Sazvar</h1>
 
       <p>
-        I am a Ph.D. candidate in Operations Research in the Industrial Engineering and Management Sciences Department at Northwestern University, advised by Professor Seyed M.R. Iravani and Professor Sanjay Mehrotra. My research develops optimization and stochastic models for <strong>online matching platforms</strong>, motivated by applications including <strong>healthcare staffing (nurse-to-shift), freelance marketplaces,
-  and volunteer matching platforms</strong>.
+        I'm a fifth-year Ph.D. candidate in Operations Research at Northwestern University, advised by Professor Seyed M.R. Iravani and Professor Sanjay Mehrotra. <strong>Graduating June 2026 &mdash; actively interviewing for Data Scientist, Applied Scientist, and Research Scientist roles.</strong>
       </p>
 
       <p>
-        I study sequential job recommendation and assignment problems in which a platform recommends limited-capacity jobs (e.g., shifts) to agents (e.g., traveling nurses) who arrive over time, have heterogeneous preferences, and may not ultimately show up. These settings create a challenging revenue management problem: the platform must allocate scarce, perishable capacity and decide when to overbook, while accounting for uncertainty about future arrivals, acceptance, and no-shows, with the goal of maximizing filled jobs and expected revenue.
+        My research builds optimization and sequential decision-making methods for <strong>online matching platforms</strong> &mdash; settings where a platform allocates limited, perishable capacity to heterogeneous users arriving over time under uncertainty about preferences and follow-through. Applications include healthcare staffing, gig and freelance marketplaces, and volunteer platforms. The methods extend naturally to ad bidding, recommender systems, and dynamic pricing.
       </p>
 
       <p>
-        My core contributions are structural and algorithmic. I analytically characterize optimal recommendation policies and prove their structural properties, then design scalable, <strong> structure-guided heuristic algorithms </strong> that translate these insights into implementable decision rules. In my current work, I extend this framework to dependent preferences and capacity-constrained <strong>assortment optimization</strong>, and develop <strong>large-scale optimization methods</strong>—including mixed-integer reformulations and decomposition-based techniques—to obtain scalable solutions in practice.
+        I combine mathematical depth &mdash; stochastic optimization, integer programming, dynamic programming, reinforcement learning &mdash; with hands-on experimentation work from a recent industry internship at Moloco.
+      </p>
+
+
+      <!-- SELECTED PUBLICATIONS -->
+      <h2>Selected publications</h2>
+
+      <p>
+        <strong>Optimal Sequential Job Recommendations with No-Shows.</strong> <em>In preparation for Manufacturing &amp; Service Operations Management.</em><br/>
+        <span class="meta">Threshold-optimal recommendation policies under no-shows; strongly polynomial-time exact algorithm and a nested-structure heuristic.</span>
       </p>
 
       <p>
-        I am also passionate about approximate dynamic programming and reinforcement learning, and have worked on rollout-augmented lookahead policies for fork-join queueing systems using simulation-based evaluation.
+        <strong>Optimization Models and Reformulations for Job Recommender Systems with Dependent Preferences and No-Shows.</strong> <em>In preparation for INFORMS Journal on Computing.</em><br/>
+        <span class="meta">MIP reformulations under multinomial logit, Markov chain choice, and exponomial models, strengthened with valid inequalities.</span>
       </p>
 
+      <p>
+        <strong>Rollout-Augmented Lookahead Policies for Dynamic Join Decisions in Fork-Join Queues.</strong> <em>In preparation.</em><br/>
+        <span class="meta">Lookahead with simulation-based rollout for sequential information-gathering decisions; benchmarked against threshold heuristics and tabular Q-learning.</span>
+      </p>
+
+      <p>
+        <a href="/research.html">See all research &rarr;</a>
+      </p>
 
 
       <!-- INDUSTRY EXPERIENCE -->
-      <h2>Recent Industry Experience (Moloco, Ads)</h2>
+      <h2>Industry experience</h2>
 
       <p>
-        In summer 2025, I was a <strong>Data Science Intern at Moloco</strong> on the Moloco Ads team. I evaluated Moloco Ads’ core throttling mechanism that selectively filters bid requests from exchanges by designing a rigorous campaign-level evaluation framework to quantify infrastructure–performance tradeoffs. I analyzed millions of auction-level bid requests to identify system-level performance patterns, applied statistical methods to separate noise from signal, and delivered reproducible analysis and documentation. The project resulted in actionable recommendations that significantly reduced performance risk for high-impact campaigns and improved the stability of throttling decisions.
+        <strong>Data Science Intern, Moloco (Ads Data Science)</strong> &mdash; Summer 2025
       </p>
+
+      <p>
+        Analyzed an A/B test on a core component of Moloco's ad-bidding stack across billions of auction-level events. Combined segment-level analysis with bid-level mechanism investigation to diagnose why the system was underperforming for top-spend campaigns, and proposed a redesign projected to deliver double-digit ROAS gains. Worked end-to-end: BigQuery data engineering, bootstrap-based statistical inference, hypothesis-driven analysis, and stakeholder-ready recommendations.
+      </p>
+
+
+      <!-- NEWS -->
+      <h2>News</h2>
+
+      <ul>
+        <li><strong>Oct 2025</strong> &mdash; Presented at INFORMS Annual Meeting, Atlanta</li>
+        <li><strong>Sep 2025</strong> &mdash; Completed Data Science internship at Moloco</li>
+        <li><strong>Oct 2024</strong> &mdash; Presented at INFORMS Annual Meeting, Seattle</li>
+      </ul>
 
 
     </div>
