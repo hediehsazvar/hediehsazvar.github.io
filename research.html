@@ -138,11 +138,11 @@ CV (PDF)
 <h1>Research</h1>
 
 <p>
-My research develops optimization and sequential decision-making methods for online matching platforms and dynamic systems under uncertainty. Three of the papers below form a connected line of work on <strong>sequential job recommendation with no-shows</strong> &mdash; characterizing optimal recommendation policies, extending to overbooking, and generalizing to dependent preferences via discrete choice models. The fourth applies <strong>approximate dynamic programming</strong> to a different setting: fork-join queueing systems with partial observations.
+My research develops optimization and sequential decision-making methods for online matching platforms and dynamic systems under uncertainty. Three of the papers below form a connected line of work on <strong>sequential job recommendation with no-shows</strong> &mdash; characterizing optimal recommendation policies, extending to overbooking, and generalizing to dependent preferences through a heterogeneous multinomial logit choice model with an outside option. The fourth applies <strong>approximate dynamic programming</strong> to a different setting: fork-join queueing systems with partial observations.
 </p>
 
 <p class="meta">
-Keywords: stochastic optimization &middot; 0-1 polynomial programming &middot; discrete choice models &middot; mixed-integer programming &middot; approximate dynamic programming &middot; sequential decision-making &middot; revenue management &middot; matching platforms
+Keywords: stochastic optimization &middot; 0-1 polynomial programming &middot; discrete choice models &middot; mixed-integer optimization &middot; assortment optimization &middot; approximate dynamic programming &middot; sequential decision-making &middot; revenue management &middot; matching platforms
 </p>
 
 
@@ -175,14 +175,15 @@ Polynomial-time evaluation of the high-degree polynomial objective embedded in a
 
   
 <p>
-<strong>Optimization Models and Reformulations for Job Recommender Systems with Dependent Preferences and No-Shows</strong><br/>
+<strong>Optimal Job Recommendation with Dependent
+Preferences</strong><br/>
 <span class="meta">
 Hedieh Sazvar, Seyed M.R. Iravani, Sanjay Mehrotra<br/>
 In preparation for submission to INFORMS Journal on Computing.
 &middot; <a href="#" onclick="openAbstract('abs3'); return false;">Abstract</a>
 </span><br/>
 <span class="meta">
-Extends the framework to dependent preferences via discrete choice models (multinomial logit, Markov chain choice, exponomial); derives exact MIP reformulations strengthened with valid inequalities and constructive heuristics.
+Extends sequential job recommendation to dependent preferences using a heterogeneous multinomial logit model with an outside option; develops exact MIP and MIQCP reformulations, valid inequalities, and restricted recommendation-set methods for personalized recommendations with no-shows and overbooking.
 </span>
 </p>
 
@@ -253,7 +254,9 @@ The increasing reliance on online platforms to match job opportunities with agen
 <h3>Abstract</h3>
 
 <p>
-Online job-matching platforms, from nurse&ndash;shift staffing to freelance and volunteer services, face a revenue-management problem in which the platform recommends jobs to sequentially arriving agents. Jobs can require multiple agents, agents are heterogeneous in both preferences and commitment, and no-shows reduce the number of completed jobs. Overbooking, i.e., allowing more agents to sign up than are ultimately required, mitigates no-shows but induces dependence across recommendation decisions and significantly increases computational complexity. Our prior work addressed this setting under independent preferences by characterizing optimal recommendation policies and developing exact and heuristic solution methods for deterministic and stochastic arrival sequences. We extend this framework to dependent preferences by modeling an agent's sign-up decision as a function of the entire recommended set through discrete choice models. We consider three choice models&mdash;the multinomial logit model, the Markov chain choice model, and the exponomial model&mdash;and, for each, derive an exact mixed-integer programming reformulation of the recommendation problem with heterogeneous agents, varying numbers of agents required across jobs, no-shows, and overbooking. We strengthen these formulations using constructive heuristics and valid inequalities that exploit problem structure. A computational study quantifies the impact of dependent preferences relative to independence-based benchmarks and demonstrates that the strengthened formulations remain tractable for real-world instance sizes.</p>
+We study online job-matching platforms, such as nurse-shift staffing, freelance, and volunteer-service platforms, where a platform recommends jobs to agents who arrive sequentially and choose from the recommended set. The platform earns revenue when signed-up agents complete their jobs. We consider settings in which job types may require multiple agents, agents may fail to show up after signing up, agents differ in their preferences and probabilities of completing each job, and the platform may use overbooking to allow additional sign-ups as protection against no-shows.
+
+This paper extends our prior work on job recommendation under <em>independent preferences</em> to <em>dependent preferences</em>, where each agent's sign-up probabilities depend on the entire set of jobs recommended to that agent. Focusing on a heterogeneous multinomial logit model with an outside option, in which choice parameters vary across agents, we derive a series of exact reformulations, including mixed-integer linear and mixed-integer quadratically constrained formulations. We develop valid inequalities that strengthen the MNL probability and sequential probability-flow components, together with restricted recommendation-set methods that search over selected subsets of recommendation sets to improve computational efficiency. The framework preserves personalized recommendations, sequential depletion of job availability, no-shows, and overbooking, and contains the constrained mixed-MNL assortment problem as a special case. Computational results show that the reformulations and valid inequalities substantially reduce solution time and branch-and-bound nodes.</p>
 
 </div>
 </div>
