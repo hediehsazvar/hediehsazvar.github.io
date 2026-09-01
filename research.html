@@ -21,25 +21,18 @@
     }
 
     .modal-content {
-
       background-color: white;
       margin: 6% auto;
       padding: 26px;
-
       width: 750px;
       max-width: 90%;
-
       border-radius: 6px;
-
       box-shadow: 0 6px 30px rgba(0,0,0,0.25);
-
       font-size: 14px;
       line-height: 1.6;
       color: #333;
-
       max-height: 75vh;
       overflow-y: auto;
-
     }
 
     .modal-content h3 {
@@ -125,7 +118,7 @@ CV (PDF)
 
 <div class="topnav">
 <a href="/" class="navlink">Home</a>
-  <a href="/about.html" class="navlink">About</a>
+<a href="/about.html" class="navlink">About</a>
 <a href="/research.html" class="navlink active">Research</a>
 <a href="/cv.html" class="navlink">CV</a>
 </div>
@@ -138,7 +131,7 @@ CV (PDF)
 <h1>Research</h1>
 
 <p>
-My research develops optimization and sequential decision-making methods for online matching platforms and dynamic systems under uncertainty. Three of the papers below form a connected line of work on <strong>sequential job recommendation with no-shows</strong> &mdash; characterizing optimal recommendation policies, extending to overbooking, and generalizing to dependent preferences through a heterogeneous multinomial logit choice model with an outside option. The fourth applies <strong>approximate dynamic programming</strong> to a different setting: fork-join queueing systems with partial observations.
+My research develops optimization and sequential decision-making methods for online matching platforms and dynamic systems under uncertainty. Three of the papers below form a connected line of work on <strong>sequential job recommendation with no-shows</strong> &mdash; characterizing optimal recommendation policies, extending the framework to overbooking, and incorporating dependent preferences through a heterogeneous multinomial logit choice model. The fourth applies <strong>approximate dynamic programming</strong> to a different setting: fork-join queueing systems with partial observations.
 </p>
 
 <p class="meta">
@@ -157,9 +150,10 @@ Submitted to Manufacturing &amp; Service Operations Management.
 &middot; <a href="#" onclick="openAbstract('abs1'); return false;">Abstract</a>
 </span><br/>
 <span class="meta">
-Threshold-optimal recommendation policies under no-shows; strongly polynomial-time exact algorithm for single-agent jobs and a nested-structure heuristic for multi-agent jobs. Quantifies the value of arrival-sequence predictability.
+Structural and algorithmic results for sequential recommendations under no-shows, including a threshold-optimal exact policy for single-agent jobs, a nested-structure heuristic for multi-agent jobs, optimal offering policies after sign-ups, and an analysis of the value of arrival-sequence predictability.
 </span>
 </p>
+
 
 <p>
 <strong>Overbooking in Sequential Job Recommendation Platforms with No-Shows</strong><br/>
@@ -173,17 +167,16 @@ Polynomial-time evaluation of the high-degree polynomial objective embedded in a
 </span>
 </p>
 
-  
+
 <p>
-<strong>Optimal Job Recommendation with Dependent
-Preferences</strong><br/>
+<strong>Optimal Job Recommendation with Dependent Preferences</strong><br/>
 <span class="meta">
 Hedieh Sazvar, Seyed M.R. Iravani, Sanjay Mehrotra<br/>
 In preparation for submission to INFORMS Journal on Computing.
 &middot; <a href="#" onclick="openAbstract('abs3'); return false;">Abstract</a>
 </span><br/>
 <span class="meta">
-Extends sequential job recommendation to dependent preferences using a heterogeneous multinomial logit model with an outside option; develops exact MIP and MIQCP reformulations, valid inequalities, and restricted recommendation-set methods for personalized recommendations with no-shows and overbooking.
+Extends sequential job recommendation to dependent preferences using a heterogeneous multinomial logit model with an outside option; develops exact MIP and MIQCP reformulations, valid inequalities, and efficient exact and heuristic decomposition algorithms for personalized recommendations with no-shows and overbooking.
 </span>
 </p>
 
@@ -223,7 +216,7 @@ In preparation for submission.
 </p>
 
 <p>
-<strong>Results:</strong> For jobs requiring a single agent, we characterize an optimal threshold policy and develop a backward-induction algorithm that yields a strongly polynomial-time exact solution. For jobs requiring multiple agents, we establish a nested optimal-solution structure and develop an efficient stepwise heuristic. We also study a setting in which agents may sign up for jobs, but after observing signups, the platform decides which agents receive offers and in what order; we analytically derive the optimal offering sequence and the offering policy. Computationally, our heuristics achieve near-optimal expected revenue while standard heuristics incur substantial optimality gaps or become infeasible as problem size increases. Relative to the show-to-all policy used in current practice, our methods deliver significant revenue improvements. We further quantify the value of arrival-sequence predictability and find that predicting only the last few arrivals captures a large fraction of the full-predictability value.
+<strong>Results:</strong> For jobs requiring a single agent, we characterize an optimal <em>threshold</em> policy and develop a backward-induction algorithm that yields a strongly polynomial-time exact solution. For jobs requiring multiple agents, we establish a nested optimal-solution structure and develop an efficient stepwise heuristic. We also study a setting in which agents may sign up for jobs, but after observing sign-ups, the platform decides which agents receive offers and in what order. In this setting, we analytically derive the optimal offering sequence and offering policy. Our numerical study shows that our heuristics achieve near-optimal expected revenue while standard heuristics incur substantial optimality gaps or become infeasible as problem size increases. Relative to the show-to-all policy used in current practice, our methods deliver significant revenue improvements. We further quantify the value of arrival-sequence predictability and find that predicting only the last few arrivals captures a large fraction of the full-predictability value.
 </p>
 
 <p>
@@ -241,7 +234,8 @@ In preparation for submission.
 <h3>Abstract</h3>
 
 <p>
-The increasing reliance on online platforms to match job opportunities with agents across various industries highlights the need for efficient job recommendation policies. This paper extends our prior work on sequential job recommendation with different preferences and commitment probabilities for each agent-job pair, as well as the varying numbers of agents required for different jobs. The model allows more agents to sign up for each job than are required, thereby mitigating the risk of absenteeism. The objective is to maximize the platform's expected revenue, which is earned when agents complete their jobs. The resulting optimization problem is a high-degree binary polynomial program. We reformulate the objective so that it can be evaluated in polynomial time and embed this evaluation in a mixed-integer program that provides exact solutions for moderate-sized instances. For larger instances, we develop a heuristic algorithm that exploits structural properties of the optimal solution to generate near-optimal policies efficiently. Computational experiments demonstrate that overbooking can substantially improve expected revenue compared with non-overbooking policies.</p>
+The increasing reliance on online platforms to match job opportunities with agents across various industries highlights the need for efficient job recommendation policies. This paper extends our prior work on sequential job recommendation with different preferences and commitment probabilities for each agent-job pair, as well as the varying numbers of agents required for different jobs. The model allows more agents to sign up for each job than are required, thereby mitigating the risk of absenteeism. The objective is to maximize the platform's expected revenue, which is earned when agents complete their jobs. The resulting optimization problem is a high-degree binary polynomial program. We reformulate the objective so that it can be evaluated in polynomial time and embed this evaluation in a mixed-integer program that provides exact solutions for moderate-sized instances. For larger instances, we develop a heuristic algorithm that exploits structural properties of the optimal solution to generate near-optimal policies efficiently. Computational experiments demonstrate that overbooking can substantially improve expected revenue compared with non-overbooking policies.
+</p>
 
 </div>
 </div>
@@ -255,8 +249,11 @@ The increasing reliance on online platforms to match job opportunities with agen
 
 <p>
 We study online job-matching platforms, such as nurse-shift staffing, freelance, and volunteer-service platforms, where a platform recommends jobs to agents who arrive sequentially and choose from the recommended set. The platform earns revenue when signed-up agents complete their jobs. We consider settings in which job types may require multiple agents, agents may fail to show up after signing up, agents differ in their preferences and probabilities of completing each job, and the platform may use overbooking to allow additional sign-ups as protection against no-shows.
+</p>
 
-This paper extends our prior work on job recommendation under <em>independent preferences</em> to <em>dependent preferences</em>, where each agent's sign-up probabilities depend on the entire set of jobs recommended to that agent. Focusing on a heterogeneous multinomial logit model with an outside option, in which choice parameters vary across agents, we derive a series of exact reformulations, including mixed-integer linear and mixed-integer quadratically constrained formulations. We develop valid inequalities that strengthen the MNL probability and sequential probability-flow components, together with restricted recommendation-set methods that search over selected subsets of recommendation sets to improve computational efficiency. The framework preserves personalized recommendations, sequential depletion of job availability, no-shows, and overbooking, and contains the constrained mixed-MNL assortment problem as a special case. Computational results show that the reformulations and valid inequalities substantially reduce solution time and branch-and-bound nodes.</p>
+<p>
+This paper extends our prior work on job recommendation under <em>independent preferences</em> to <em>dependent preferences</em>, where each agent's sign-up probabilities depend on the entire set of jobs recommended to that agent. Focusing on a heterogeneous multinomial logit model with an outside option, in which choice parameters vary across agents, we develop a sequence of exact mixed-integer linear and mixed-integer quadratically constrained reformulations. We strengthen these formulations with valid inequalities that exploit the MNL choice structure and the sequential evolution of sign-ups and commitments. We further develop efficient heuristic and exact decomposition algorithms that avoid enumerating the full recommendation space, with the exact algorithm providing a global optimality guarantee. Computational results show that the proposed reformulations and valid inequalities substantially reduce solution time and branch-and-bound nodes.
+</p>
 
 </div>
 </div>
@@ -269,7 +266,8 @@ This paper extends our prior work on job recommendation under <em>independent pr
 <h3>Abstract</h3>
 
 <p>
-Fork-join queues arise frequently in parallel service systems where each job is evaluated by multiple servers, and the join decision must often be made before all evaluations are complete. The key challenge is to determine when to stop collecting additional information and make a final prediction, which balances service delay against misclassification risk. We build on the threshold-based heuristic proposed by Singla and Iravani (2024), and introduce a policy that augments this baseline with a k-step lookahead and an H-step simulation-based rollout to better approximate the cost-to-go. We compare this policy against the original heuristic and a tabular Q-learning benchmark. Across a range of system parameters, we find that even shallow lookahead and short rollout lengths lead to meaningful reductions in long-run average cost. These results demonstrate the effectiveness of simple approximate dynamic programming techniques in continuous-time decision models with partial observations.</p>
+Fork-join queues arise frequently in parallel service systems where each job is evaluated by multiple servers, and the join decision must often be made before all evaluations are complete. The key challenge is to determine when to stop collecting additional information and make a final prediction, which balances service delay against misclassification risk. We build on the threshold-based heuristic proposed by Singla and Iravani (2024), and introduce a policy that augments this baseline with a k-step lookahead and an H-step simulation-based rollout to better approximate the cost-to-go. We compare this policy against the original heuristic and a tabular Q-learning benchmark. Across a range of system parameters, we find that even shallow lookahead and short rollout lengths lead to meaningful reductions in long-run average cost. These results demonstrate the effectiveness of simple approximate dynamic programming techniques in continuous-time decision models with partial observations.
+</p>
 
 </div>
 </div>
